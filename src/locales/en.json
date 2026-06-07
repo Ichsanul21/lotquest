@@ -1,0 +1,1032 @@
+{
+  "app": {
+    "name": "LOT Quest",
+    "tagline": "Level Up Your Career"
+  },
+  "nav": {
+    "home": "Home",
+    "quest": "Quests",
+    "academy": "Academy",
+    "listing": "Listings",
+    "prospect": "Prospects",
+    "profile": "Profile",
+    "badges": "Badges",
+    "leaderboard": "Leaderboard",
+    "support": "Support",
+    "poster": "Poster",
+    "chat": "Chat",
+    "hall-of-fame": "Hall of Fame",
+    "logout": "Logout"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "forgot_password": "Forgot Password",
+    "email": "Email",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "username": "Username",
+    "name": "Full Name",
+    "cabang": "Branch",
+    "forgot_desc": "Enter your email to receive a password reset link.",
+    "send_link": "Send Link",
+    "back_to_login": "Back to Login",
+    "no_account": "Don't have an account?",
+    "has_account": "Already have an account?",
+    "login_desc": "Sign in to your LOT Quest account",
+    "register_desc": "Create a new LOT Quest account",
+    "recruit_code": "Recruit Code (optional)",
+    "check_email": "Check Your Email",
+    "remember_me": "Remember Me",
+    "new_password": "New Password",
+    "reset_password": "Reset Password",
+    "reset_desc": "Enter your new password.",
+    "resend_link": "Resend Link",
+    "agree_terms": "I agree to the terms and conditions",
+    "register_success": "Registration successful! Please login.",
+    "login_success": "Login successful!",
+    "or_continue_with": "Or continue with",
+    "no_internet": "No internet connection",
+    "toast": {
+      "error_login": "Login failed. Check your email and password.",
+      "error_register": "Registration failed. Please try again.",
+      "error_forgot": "Failed to send reset link. Check your email.",
+      "success_forgot": "Password reset link has been sent to your email.",
+      "error_reset": "Failed to reset password. The link may have expired.",
+      "success_reset": "Password reset successfully! Please login.",
+      "error_logout": "Failed to logout"
+    },
+    "error": {
+      "invalid_email": "Invalid email format",
+      "invalid_password": "Password must be at least 6 characters",
+      "password_mismatch": "Passwords do not match",
+      "required": "This field is required",
+      "email_exists": "Email is already registered",
+      "username_exists": "Username is already taken",
+      "wrong_credentials": "Wrong email or password",
+      "weak_password": "Password is too weak"
+    }
+  },
+  "home": {
+    "greeting": "Hello,",
+    "stats": "My Stats",
+    "recent_activity": "Recent Activity",
+    "leaderboard": "Leaderboard",
+    "hof": "Hall of Fame",
+    "event_quest": "Event Quest",
+    "daily_quest": "Daily Quest",
+    "my_progress": "My Progress",
+    "day_streak": "Day Streak",
+    "level": "Level",
+    "xp": "XP",
+    "next_level": "Next Level",
+    "total_commission": "Total Commission",
+    "total_transactions": "Total Transactions",
+    "total_listings": "Total Listings",
+    "total_prospects": "Total Prospects",
+    "quests_done": "Quests Done",
+    "view_all": "View All",
+    "this_month": "This Month",
+    "toast": {
+      "error_load_stats": "Failed to load stats",
+      "error_load_activity": "Failed to load recent activity",
+      "error_load_leaderboard": "Failed to load leaderboard",
+      "error_load_hof": "Failed to load Hall of Fame",
+      "refresh_success": "Home refreshed successfully"
+    },
+    "period": {
+      "month": "This Month",
+      "year": "This Year",
+      "all": "All Time"
+    },
+    "activity_empty": {
+      "title": "No Activity Yet",
+      "description": "Start quests or create listings to see your activity here."
+    },
+    "hof_empty": {
+      "title": "No Winners Yet",
+      "description": "Hall of Fame data will appear after the period ends."
+    },
+    "error": {
+      "hof": "Failed to load Hall of Fame",
+      "event_quest": "Failed to load event quests",
+      "daily_quest": "Failed to load daily quests",
+      "leaderboard": "Failed to load leaderboard",
+      "progress": "Failed to load progress",
+      "stats": "Failed to load statistics",
+      "activity": "Failed to load activity"
+    },
+    "empty": {
+      "hof": "Hall of Fame not yet available",
+      "leaderboard": "Leaderboard not yet available",
+      "activity": "No recent activity",
+      "activity_desc": "Recent activity will appear here"
+    },
+    "stats": {
+      "total_prospects": "Total Prospects",
+      "recruitment": "Recruitment",
+      "training": "Training",
+      "day_streak": "Day Streak"
+    },
+    "leaderboard_search": "Search agents...",
+    "stats_view_profile": "View Profile",
+    "quick_actions": "Quick Actions"
+  },
+  "quest": {
+    "title": "Quests",
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "event": "Event",
+    "achievement": "Achievement",
+    "claim": "Claim",
+    "completed": "Completed",
+    "locked": "Locked",
+    "in_progress": "In Progress",
+    "xp_reward": "XP Reward",
+    "badge_reward": "Badge Reward",
+    "ends_in": "Ends in",
+    "progress": "Progress",
+    "toast": {
+      "error_load": "Failed to load quests",
+      "error_claim": "Failed to claim reward",
+      "success_claim": "Reward claimed successfully!",
+      "error_start": "Failed to start quest"
+    },
+    "empty": {
+      "title": "No Quests Available",
+      "description": "No quests available at the moment. Check back later!"
+    },
+    "detail": {
+      "title": "Quest Details",
+      "requirement": "Requirements",
+      "reward": "Reward",
+      "deadline": "Deadline",
+      "steps": "Steps",
+      "how_to_complete": "How to Complete",
+      "start": "Start Quest",
+      "already_claimed": "Already Claimed"
+    },
+    "status": {
+      "not_started": "Not Started",
+      "in_progress": "In Progress",
+      "completed": "Completed",
+      "locked": "Locked",
+      "claimed": "Claimed",
+      "active": "Active",
+      "expired": "Expired"
+    },
+    "search": "Search quests...",
+    "error": {
+      "load": "Failed to load quests"
+    },
+    "search_empty": {
+      "title": "No results",
+      "description": "Try using different keywords"
+    },
+    "claim_confirm": {
+      "title": "Claim Reward",
+      "cancel": "Cancel"
+    }
+  },
+  "academy": {
+    "title": "Academy",
+    "categories": {
+      "all": "All",
+      "product_knowledge": "Product Knowledge",
+      "sales_technique": "Sales Technique",
+      "marketing": "Marketing",
+      "market_update": "Market Update",
+      "company": "Company"
+    },
+    "completed": "Completed",
+    "locked": "Locked",
+    "xp_reward": "XP Reward",
+    "duration": "Duration",
+    "minutes": "min",
+    "start": "Start",
+    "watch_again": "Watch Again",
+    "toast": {
+      "error_load": "Failed to load academy materials",
+      "error_load_detail": "Failed to load material details",
+      "error_start": "Failed to start material",
+      "success_complete": "Material completed! XP reward has been added.",
+      "error_complete": "Failed to mark as complete",
+      "error_mark": "Failed to mark material",
+      "module_complete": "Module completed!",
+      "video_complete": "Video completed!",
+      "xp_prefix": "XP"
+    },
+    "empty": {
+      "title": "No Materials Yet",
+      "description": "Academy materials will be available soon."
+    },
+    "search_placeholder": "Search materials...",
+    "search": "Search",
+    "search_empty": {
+      "title": "No results",
+      "for": "for",
+      "try_other": "Try using different keywords"
+    },
+    "mark_complete": "Mark Complete",
+    "continue": "Continue",
+    "all_categories": "All Categories",
+    "duration_format": "{{minutes}} min",
+    "level_requirement": "Level 20+",
+    "xp_after_complete": "XP after completion",
+    "error": {
+      "load": "Failed to load academy materials"
+    },
+    "button": {
+      "restart": "Restart",
+      "next_material": "Next Material"
+    }
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "bulanan": "Monthly",
+    "all_time": "All-Time",
+    "rank": "Rank",
+    "agent": "Agent",
+    "commission": "Commission",
+    "transactions": "Transactions",
+    "you": "You",
+    "no_data": "No data yet",
+    "top_commission": "Top Commission",
+    "top_unit": "Top Unit",
+    "top_primary": "Top Primary",
+    "rising_star": "Rising Star",
+    "search_agent": "Search agent...",
+    "toast": {
+      "error_load": "Failed to load leaderboard"
+    },
+    "search_placeholder": "Search agents...",
+    "filter": {
+      "all_cabang": "All Branches",
+      "all_team": "All Teams"
+    },
+    "empty": {
+      "title": "No Data Yet",
+      "description": "Leaderboard data will appear once agents start transacting."
+    },
+    "error": {
+      "load": "Failed to load leaderboard"
+    },
+    "all_branch": "All Branches",
+    "all_team": "All Teams",
+    "no_results": "No results found",
+    "my_rank": "My Rank",
+    "score": "Score",
+    "points": "Points",
+    "view_profile": "View Profile",
+    "this_week": "This Week",
+    "this_month": "This Month"
+  },
+  "profile": {
+    "title": "Profile",
+    "edit": "Edit Profile",
+    "change_photo": "Change Photo",
+    "personal_info": "Personal Info",
+    "stats": "Stats",
+    "badges": "Badges",
+    "referral_code": "Referral Code",
+    "share_profile": "Share Profile",
+    "settings": "Settings",
+    "language": "Language",
+    "notifications": "Notifications",
+    "about": "About",
+    "version": "Version",
+    "toast": {
+      "error_load": "Failed to load profile",
+      "success_save": "Profile updated successfully!",
+      "error_save": "Failed to save profile",
+      "success_photo": "Profile photo updated successfully",
+      "error_photo": "Failed to change profile photo",
+      "copy_referral": "Referral code copied!",
+      "download_card": "Profile card downloaded successfully",
+      "share_error": "Failed to share profile"
+    },
+    "confirm": {
+      "logout_title": "Confirm Logout",
+      "logout_message": "Are you sure you want to logout?"
+    },
+    "job_title": "Job Title",
+    "phone": "Phone Number",
+    "email_display": "Email",
+    "join_date": "Join Date",
+    "member_since": "Member Since",
+    "career_stats": "Career Stats",
+    "career": {
+      "title": "Career Stats",
+      "unit_sold": "Units Sold",
+      "total_recruit": "Total Recruits",
+      "training": "Training"
+    },
+    "info": {
+      "cabang": "Branch",
+      "team": "Team",
+      "joined": "Joined",
+      "rank": "Rank"
+    },
+    "action": {
+      "create_poster": "Create Poster",
+      "my_badges": "My Badges",
+      "activity_history": "Activity History"
+    },
+    "featured_badges": "Featured Badges",
+    "featured_badges_empty": "No featured badges yet",
+    "featured_badges_manage": "Manage Featured Badges",
+    "hof_history": "Hall of Fame History",
+    "loading_error": "Failed to load profile",
+    "logout": "Logout",
+    "logout_confirm": {
+      "title": "Confirm Logout",
+      "description": "Are you sure you want to logout?",
+      "confirm": "Yes, Logout"
+    },
+    "share": {
+      "label": "Share Profile",
+      "listing": "Listings",
+      "commission": "Commission",
+      "level": "Level"
+    },
+    "stats": {
+      "listing": "Listings",
+      "commission": "Commission",
+      "quest_done": "Quests Done",
+      "badges": "Badges"
+    },
+    "period": {
+      "this_month": "This Month",
+      "all_time": "All Time"
+    },
+    "stat": {
+      "level": "Level",
+      "xp": "XP",
+      "rank": "Rank",
+      "quest_done": "Quests Done",
+      "day_streak": "Day Streak",
+      "total_commission": "Total Commission",
+      "total_transactions": "Total Transactions",
+      "total_listings": "Total Listings",
+      "total_prospects": "Total Prospects"
+    },
+    "no_badges": "No badges yet",
+    "edit_photo": "Edit Photo",
+    "view_full_profile": "View Full Profile",
+    "save_photo": "Save Photo"
+  },
+  "badges": {
+    "title": "Badges",
+    "common": "Common",
+    "rare": "Rare",
+    "epic": "Epic",
+    "legendary": "Legendary",
+    "featured": "Featured",
+    "all": "All",
+    "earned": "Earned",
+    "locked": "Locked",
+    "no_badges": "No badges yet",
+    "toast": {
+      "error_load": "Failed to load badges",
+      "success_feature": "Badge featured successfully",
+      "error_feature": "Failed to feature badge",
+      "success_unfeature": "Badge unfeatured successfully",
+      "error_unfeature": "Failed to unfeature badge"
+    },
+    "search_placeholder": "Search badges...",
+    "empty": {
+      "title": "No Badges",
+      "description": "Complete quests to earn badges."
+    },
+    "modal": {
+      "title": "Badge Details",
+      "how_to_earn": "How to Earn",
+      "description": "Description",
+      "date_earned": "Date Earned"
+    },
+    "confirm": {
+      "feature_title": "Feature Badge",
+      "feature_message": "This badge will be displayed on your profile.",
+      "unfeature_title": "Remove Featured",
+      "unfeature_message": "This badge will no longer be displayed on your profile."
+    },
+    "feature": "Feature",
+    "unfeature": "Unfeature",
+    "featured_count": "{{count}} of {{max}} featured",
+    "no_results": "No matching badges",
+    "no_results_desc": "No badges match your search."
+  },
+  "support": {
+    "title": "Support",
+    "faq": "FAQ",
+    "contact": "Contact Us",
+    "contact_chat": "Chat with Us",
+    "report": "Report an Issue",
+    "description": "How can we help you?",
+    "toast": {
+      "error_load": "Failed to load support page",
+      "success_send": "Message sent successfully! We will contact you soon.",
+      "error_send": "Failed to send message. Please try again."
+    },
+    "faq_items": {
+      "q1": "How do I claim quest rewards?",
+      "a1": "Go to the Quests page, complete available quests, then click the Claim button on completed quests.",
+      "q2": "How do I add a property listing?",
+      "a2": "Go to the Listings page, click Add Listing, then fill in the form with your property details.",
+      "q3": "How is commission calculated?",
+      "a3": "Commission is calculated based on total transactions you successfully closed within a given period.",
+      "q4": "What is XP and how do I earn it?",
+      "a4": "XP is experience points earned by completing quests, academy materials, and transactions.",
+      "q5": "How do I change my password?",
+      "a5": "Go to Profile > Settings, then select the Change Password option."
+    },
+    "contact_form": {
+      "name": "Name",
+      "name_placeholder": "Enter your name",
+      "email": "Email",
+      "email_placeholder": "Enter your email",
+      "phone": "Phone",
+      "phone_placeholder": "Enter your phone number",
+      "message": "Message",
+      "message_placeholder": "Write your message...",
+      "title": "Contact Form",
+      "description": "Fill out the form below to contact us",
+      "placeholder": "Write your message..."
+    },
+    "transaction": {
+      "title": "Transactions",
+      "description": "Need help with a transaction? Contact our support team."
+    },
+    "report_form": {
+      "category": "Category",
+      "category_placeholder": "Select category",
+      "category_technical": "Technical Issue",
+      "category_billing": "Billing Issue",
+      "category_account": "Account Issue",
+      "category_other": "Other",
+      "description_label": "Issue Description",
+      "description_placeholder": "Describe the issue you're experiencing..."
+    },
+    "claim_commission": "Claim Commission",
+    "commission_form": "Commission Form",
+    "drive": "Drive",
+    "marketing_materials": "Marketing Materials",
+    "no_transactions": "No transactions yet",
+    "transaction": "Transaction",
+    "transactions": "Transactions",
+    "report_button": "Report",
+    "report_description": "Describe the issue you are experiencing"
+  },
+  "poster": {
+    "title": "Poster",
+    "generate": "Create Poster",
+    "download": "Download",
+    "share": "Share",
+    "preview": "Preview",
+    "toast": {
+      "error_load": "Failed to load poster",
+      "error_generate": "Failed to create poster",
+      "success_generate": "Poster created successfully!",
+      "error_download": "Failed to download poster",
+      "success_download": "Poster downloaded successfully",
+      "downloaded": "Poster downloaded successfully",
+      "error_share": "Failed to share poster",
+      "success_share": "Poster shared successfully",
+      "link_copied": "Poster link copied!"
+    },
+    "description": "Create a professional poster for your branding.",
+    "description_placeholder": "Add a description...",
+    "job_title": "Job Title",
+    "job_title_placeholder": "Enter your job title",
+    "logo": "Logo",
+    "scan_text": "Scan to contact me",
+    "share_label": "Share Poster",
+    "qr_code": "QR Code",
+    "agent_name": "Agent Name",
+    "agent_label": "Agent",
+    "level": "Level",
+    "scan_hint": "Scan to contact me",
+    "edit_poster": "Edit Poster",
+    "style": "Style",
+    "style_classic": "Classic",
+    "style_modern": "Modern",
+    "style_elegant": "Elegant",
+    "name_label": "Name",
+    "phone_label": "Phone",
+    "email_label": "Email",
+    "select_template": "Select Template",
+    "customize": "Customize",
+    "save_template": "Save Template"
+  },
+  "chat": {
+    "title": "Chat",
+    "placeholder": "Type a message...",
+    "send": "Send",
+    "empty": "No messages yet. Start a conversation!",
+    "toast": {
+      "error_load": "Failed to load messages",
+      "error_send": "Failed to send message. Please try again.",
+      "error_load_conversation": "Failed to load conversation"
+    },
+    "announcement": {
+      "title": "Announcement",
+      "empty": "No announcements"
+    },
+    "empty_state": {
+      "title": "No Conversations",
+      "description": "Start a conversation by contacting another agent or support team."
+    },
+    "typing": "is typing...",
+    "new_message": "New Message",
+    "today": "Today",
+    "yesterday": "Yesterday"
+  },
+  "hall_of_fame": {
+    "title": "Hall of Fame",
+    "bulanan": "Monthly",
+    "all_time": "All-Time",
+    "rising_star": "Rising Star",
+    "admin_pick": "Admin Pick",
+    "top_commission": "Top Commission",
+    "top_unit": "Top Unit",
+    "top_primary": "Top Primary",
+    "rank_1": "Rank 1",
+    "rank_2": "Rank 2",
+    "rank_3": "Rank 3",
+    "toast": {
+      "error_load": "Failed to load Hall of Fame"
+    },
+    "error": {
+      "load": "Failed to load Hall of Fame"
+    },
+    "empty": {
+      "title": "No Winners Yet",
+      "description": "Winners will be displayed after the period ends."
+    },
+    "poster_button": "Create Poster",
+    "congratulations": "Congratulations to the winners!",
+    "period": {
+      "monthly": "Monthly",
+      "all_time": "All-Time"
+    },
+    "category": {
+      "rising_star": "Rising Star",
+      "admin_pick": "Admin Pick"
+    }
+  },
+  "notification": {
+    "title": "Notifications",
+    "empty": "No notifications",
+    "mark_read": "Mark as Read",
+    "mark_all_read": "Mark All Read",
+    "all": "All",
+    "unread": "Unread",
+    "toast": {
+      "error_load": "Failed to load notifications",
+      "error_mark_read": "Failed to mark notification",
+      "success_mark_read": "Notification marked as read",
+      "error_mark": "Failed to mark notification",
+      "success_mark_all": "All notifications marked as read"
+    },
+    "filter": {
+      "all": "All",
+      "unread": "Unread",
+      "read": "Read"
+    },
+    "empty_state": {
+      "title": "No Notifications",
+      "description": "You will receive notifications about quests, rewards, and other activities."
+    },
+    "empty": {
+      "title": "No Notifications",
+      "all_read": "All notifications are read",
+      "none": "No notifications yet"
+    },
+    "unread_count": "{{count}} unread",
+    "unread": "Unread",
+    "confirm_mark_all_read": "Mark all notifications as read?",
+    "just_now": "Just now",
+    "minutes_ago": "{{minutes}} minutes ago",
+    "hours_ago": "{{hours}} hours ago",
+    "days_ago": "{{days}} days ago"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "search": "Search...",
+    "no_data": "No data",
+    "monthly": "Monthly",
+    "reload": "Reload",
+    "commission": "Commission",
+    "xp": "XP",
+    "days": "days",
+    "back": "Back",
+    "next": "Next",
+    "skip": "Skip",
+    "done": "Done",
+    "close": "Close",
+    "load_more": "Load More",
+    "send": "Send"
+  },
+  "listing": {
+    "title": "Listings",
+    "tab": {
+      "my_listing": "My Listings",
+      "prospect": "Prospects"
+    },
+    "tabs": {
+      "all": "All",
+      "active": "Active",
+      "sold": "Sold",
+      "expired": "Expired",
+      "rent": "For Rent"
+    },
+    "filter": {
+      "all": "All",
+      "active": "Active",
+      "expired": "Expired",
+      "sold": "Sold"
+    },
+    "sort": {
+      "newest": "Newest",
+      "oldest": "Oldest",
+      "highest_price": "Highest Price",
+      "lowest_price": "Lowest Price",
+      "cheapest": "Cheapest",
+      "expensive": "Most Expensive"
+    },
+    "status": {
+      "active": "Active",
+      "sold": "Sold",
+      "expired": "Expired",
+      "rent": "For Rent",
+      "draft": "Draft",
+      "new": "New",
+      "contacted": "Contacted",
+      "converted": "Converted",
+      "lost": "Lost"
+    },
+    "action": {
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "form": {
+      "title": "Listing Title",
+      "title_placeholder": "Enter listing title",
+      "lt": "Land Area (m²)",
+      "lt_placeholder": "e.g. 100",
+      "lb": "Building Area (m²)",
+      "lb_placeholder": "e.g. 80",
+      "lantai": "Floor",
+      "lantai_placeholder": "Number of floors",
+      "keterangan": "Description",
+      "keterangan_placeholder": "Describe your property",
+      "price": "Price",
+      "price_placeholder": "Enter price",
+      "address": "Address",
+      "address_placeholder": "Enter full address",
+      "property_type": "Property Type",
+      "listing_type": "Listing Type",
+      "description": "Description",
+      "description_placeholder": "Write property description...",
+      "name": "Property Name",
+      "city": "City",
+      "city_placeholder": "Select city",
+      "province": "Province",
+      "province_placeholder": "Select province"
+    },
+    "type": {
+      "rumah": "House",
+      "apartemen": "Apartment",
+      "tanah": "Land",
+      "ruko": "Shop House",
+      "gudang": "Warehouse",
+      "kantor": "Office"
+    },
+    "confirm": {
+      "delete_title": "Delete Listing",
+      "delete_message": "Are you sure you want to delete this listing? This action cannot be undone.",
+      "mark_sold_title": "Mark as Sold",
+      "mark_sold_message": "Mark this property as sold?"
+    },
+    "toast": {
+      "error_load": "Failed to load listings",
+      "error_load_detail": "Failed to load listing details",
+      "success_save": "Listing saved successfully!",
+      "error_save": "Failed to save listing",
+      "success_delete": "Listing deleted successfully",
+      "error_delete": "Failed to delete listing",
+      "success_status": "Listing status updated successfully",
+      "error_status": "Failed to update listing status",
+      "created_listing": "Listing created successfully",
+      "updated_listing": "Listing updated successfully",
+      "deleted_listing": "Listing deleted successfully",
+      "error_create_listing": "Failed to create listing",
+      "error_update_listing": "Failed to update listing",
+      "created_prospect": "Prospect created successfully",
+      "updated_prospect": "Prospect updated successfully",
+      "deleted_prospect": "Prospect deleted successfully",
+      "error_create_prospect": "Failed to create prospect",
+      "error_update_prospect": "Failed to update prospect",
+      "require_name": "Name is required",
+      "require_phone": "Phone number is required",
+      "require_owner": "Owner name is required",
+      "require_address": "Address is required"
+    },
+    "empty": {
+      "title": "No Listings Yet",
+      "description": "Create your first property listing to start selling.",
+      "filtered_title": "Not Found",
+      "filtered_description": "No listings match the selected filters.",
+      "action": "Create New Listing"
+    },
+    "error": {
+      "load_listings": "Failed to load listings",
+      "load_prospects": "Failed to load prospects",
+      "update_status": "Failed to update status"
+    },
+    "modal": {
+      "add_listing": "Add Listing",
+      "edit_listing": "Edit Listing",
+      "add_prospect": "Add Prospect",
+      "edit_prospect": "Edit Prospect",
+      "save_listing": "Save Listing",
+      "save_prospect": "Save Prospect",
+      "save_changes": "Save Changes",
+      "category": {
+        "house": "House",
+        "apartment": "Apartment",
+        "land": "Land",
+        "shop": "Shop House",
+        "commercial": "Commercial"
+      },
+      "type": {
+        "sell": "Sell",
+        "rent": "Rent"
+      },
+      "field": {
+        "owner_name": "Owner Name",
+        "phone": "Phone",
+        "address": "Address",
+        "price": "Price",
+        "category": "Category",
+        "type": "Type",
+        "land_size": "Land Size",
+        "building_size": "Building Size",
+        "floor": "Floor",
+        "notes": "Notes"
+      }
+    },
+    "delete": {
+      "title": "Delete Listing",
+      "description": "Are you sure you want to delete this listing?",
+      "confirm": "Yes, Delete"
+    },
+    "add_listing": "Add Listing",
+    "add_prospect": "Add Prospect",
+    "search_listing": "Search listings...",
+    "search_prospect": "Search prospects...",
+    "lt": "Land Area",
+    "lb": "Building Area",
+    "floor_label": "Floor",
+    "status_changed": "Status changed to {{status}}",
+    "prospect_empty": {
+      "title": "No Prospects Yet",
+      "description": "Add new prospects to get started.",
+      "action": "Add Prospect"
+    },
+    "prospect_field": {
+      "name": "Name",
+      "phone": "Phone",
+      "source": "Source",
+      "notes": "Notes"
+    },
+    "add_new": "Add Listing",
+    "edit": "Edit Listing",
+    "detail": "Listing Details",
+    "mark_sold": "Mark as Sold"
+  },
+  "streak": {
+    "days": "days",
+    "keep_going": "Keep going!",
+    "come_back": "Come back tomorrow for streak!"
+  },
+  "level": {
+    "rookie": "Rookie",
+    "junior": "Junior",
+    "senior": "Senior",
+    "elite": "Elite",
+    "super_elite": "Super Elite",
+    "legendary": "LOT Legendary"
+  },
+  "onboarding": {
+    "step_1_title": "Upload Profile Photo",
+    "step_1_desc": "Choose your profile photo to start your LOT Quest journey.",
+    "step1": {
+      "title": "Upload Profile Photo",
+      "desc": "Choose your profile photo to start your LOT Quest journey."
+    },
+    "step_2_title": "Set Notifications",
+    "step_2_desc": "Enable notifications so you never miss quests and rewards.",
+    "step2": {
+      "title": "Set Notifications",
+      "desc": "Enable notifications so you never miss quests and rewards."
+    },
+    "step_3_title": "You're Ready!",
+    "step_3_desc": "You're ready to start your LOT Quest adventure!",
+    "step3": {
+      "title": "You're Ready!",
+      "desc": "You're ready to start your LOT Quest adventure!"
+    },
+    "upload_photo": "Upload Photo",
+    "upload_hint": "Upload your profile photo",
+    "skip_for_now": "Skip for Now",
+    "skip": "Skip",
+    "next": "Next",
+    "start": "Start",
+    "allow_notifications": "Allow Notifications",
+    "allow_notification": "Allow Notifications",
+    "start_journey": "Start Journey",
+    "welcome_title": "Welcome to LOT Quest!",
+    "welcome_desc": "A gamification platform to boost your property career.",
+    "greeting": "Hello, {{name}}!"
+  },
+  "settings": {
+    "title": "Settings",
+    "toast": {
+      "error_save": "Failed to save settings",
+      "success_save": "Settings saved successfully!",
+      "error_load": "Failed to load settings",
+      "copy_referral": "Referral code copied!",
+      "name_required": "Name is required",
+      "password_changed": "Password changed successfully",
+      "password_error": "Failed to change password",
+      "password_mismatch": "Passwords do not match",
+      "password_short": "Password must be at least 6 characters",
+      "profile_error": "Failed to update profile",
+      "profile_updated": "Profile updated successfully"
+    },
+    "section": {
+      "account": "Account",
+      "notifications": "Notifications",
+      "appearance": "Appearance",
+      "about": "About",
+      "privacy": "Privacy"
+    },
+    "about": {
+      "app_name": "LOT Quest",
+      "description": "A gamification platform for property agents to boost career and performance.",
+      "version": "Version 1.0.0",
+      "website": "Visit Website",
+      "privacy_policy": "Privacy Policy",
+      "terms_of_service": "Terms of Service",
+      "licenses": "Licenses"
+    },
+    "confirm": {
+      "logout_title": "Logout",
+      "logout_message": "Are you sure you want to logout?"
+    },
+    "change_password": "Change Password",
+    "current_password": "Current Password",
+    "current_password_placeholder": "Enter current password",
+    "new_password": "New Password",
+    "new_password_placeholder": "Enter new password",
+    "confirm_password": "Confirm New Password",
+    "confirm_password_placeholder": "Re-enter new password",
+    "language": "Language",
+    "language_placeholder": "Select language",
+    "notification_settings": "Notification Settings",
+    "save": "Save Settings",
+    "account": "Account",
+    "edit_profile": "Edit Profile",
+    "referral_code": "Referral Code",
+    "preferences": "Preferences",
+    "about": "About",
+    "about_app": "About App",
+    "about_developer": "About Developer",
+    "about_version": "App Version",
+    "logout": "Logout",
+    "logout_confirm": {
+      "title": "Confirm Logout",
+      "description": "Are you sure you want to logout?",
+      "confirm": "Yes, Logout"
+    },
+    "change_password_modal": {
+      "title": "Change Password",
+      "current": "Current Password",
+      "new": "New Password",
+      "confirm": "Confirm Password",
+      "save": "Save"
+    },
+    "edit_profile_modal": {
+      "title": "Edit Profile",
+      "camera_hint": "Take a photo or choose from gallery",
+      "field_name": "Name",
+      "field_phone": "Phone",
+      "save": "Save"
+    },
+    "lang_id": "Bahasa Indonesia",
+    "lang_en": "English"
+  },
+  "activity": {
+    "title": "Activities",
+    "load_more": "Load More",
+    "filter": {
+      "all": "All Activities",
+      "quest": "Quests",
+      "listing": "Listings",
+      "transaction": "Transactions",
+      "badge": "Badges",
+      "academy": "Academy"
+    },
+    "empty": {
+      "title": "No Activity Yet",
+      "description": "Your activity will appear here."
+    },
+    "toast": {
+      "error_load": "Failed to load activities"
+    },
+    "type": {
+      "quest_completed": "Completed a quest",
+      "badge_earned": "Earned a badge",
+      "listing_created": "Created a listing",
+      "listing_sold": "Listing sold",
+      "transaction_done": "Made a transaction",
+      "academy_completed": "Completed academy material",
+      "level_up": "Leveled up"
+    }
+  },
+  "agent_detail": {
+    "title": "Agent Details",
+    "toast": {
+      "error_load": "Failed to load agent details"
+    },
+    "empty": {
+      "title": "Data Unavailable",
+      "description": "Agent data could not be found."
+    },
+    "back": "Back",
+    "share": "Share Profile",
+    "join_date": "Member Since",
+    "section": {
+      "stats": "Stats",
+      "badges": "Badges",
+      "listings": "Listings",
+      "activity": "Recent Activity"
+    },
+    "stat": {
+      "commission": "Total Commission",
+      "transactions": "Total Transactions",
+      "listings": "Total Listings",
+      "prospects": "Total Prospects",
+      "level": "Level",
+      "xp": "XP",
+      "rank": "Rank"
+    }
+  },
+  "quest_detail": {
+    "title": "Quest Details",
+    "toast": {
+      "error_load": "Failed to load quest details"
+    },
+    "empty": {
+      "title": "Quest Not Found",
+      "description": "The quest you're looking for is unavailable or has ended."
+    },
+    "back": "Back",
+    "section": {
+      "requirement": "Requirements",
+      "reward": "Reward",
+      "progress": "Progress",
+      "steps": "Steps"
+    },
+    "status": {
+      "not_started": "Not Started",
+      "in_progress": "In Progress",
+      "completed": "Completed",
+      "locked": "Locked",
+      "claimed": "Claimed"
+    },
+    "button": {
+      "claim": "Claim Reward",
+      "start": "Start Quest",
+      "restart": "Restart Quest"
+    },
+    "deadline": "Deadline",
+    "steps_completed": "{{completed}} of {{total}} steps",
+    "reward_xp": "{{xp}} XP",
+    "reward_badge": "Badge: {{name}}"
+  },
+  "pwa": {
+    "install_title": "Install LOT Quest",
+    "install_desc": "Add to home screen for quick access",
+    "install": "Install",
+    "later": "Later",
+    "offline": "You are offline. Some features may be unavailable."
+  }
+}

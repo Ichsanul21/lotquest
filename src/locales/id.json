@@ -1,0 +1,1032 @@
+{
+  "app": {
+    "name": "LOT Quest",
+    "tagline": "Level Up Your Career"
+  },
+  "nav": {
+    "home": "Beranda",
+    "quest": "Quest",
+    "academy": "Akademi",
+    "listing": "Listing",
+    "prospect": "Prospek",
+    "profile": "Profil",
+    "badges": "Lencana",
+    "leaderboard": "Papan Skor",
+    "support": "Bantuan",
+    "poster": "Poster",
+    "chat": "Chat",
+    "hall-of-fame": "Hall of Fame",
+    "logout": "Keluar"
+  },
+  "auth": {
+    "login": "Masuk",
+    "register": "Daftar",
+    "forgot_password": "Lupa Kata Sandi",
+    "email": "Email",
+    "password": "Kata Sandi",
+    "confirm_password": "Konfirmasi Kata Sandi",
+    "username": "Nama Pengguna",
+    "name": "Nama Lengkap",
+    "cabang": "Cabang",
+    "forgot_desc": "Masukkan email Anda untuk menerima tautan reset kata sandi.",
+    "send_link": "Kirim Tautan",
+    "back_to_login": "Kembali ke Masuk",
+    "no_account": "Belum punya akun?",
+    "has_account": "Sudah punya akun?",
+    "login_desc": "Masuk ke akun LOT Quest Anda",
+    "register_desc": "Buat akun LOT Quest baru",
+    "recruit_code": "Kode Rekrut (opsional)",
+    "check_email": "Periksa Email Anda",
+    "remember_me": "Ingat Saya",
+    "new_password": "Kata Sandi Baru",
+    "reset_password": "Reset Kata Sandi",
+    "reset_desc": "Masukkan kata sandi baru Anda.",
+    "resend_link": "Kirim Ulang Tautan",
+    "agree_terms": "Saya setuju dengan syarat dan ketentuan",
+    "register_success": "Pendaftaran berhasil! Silakan masuk.",
+    "login_success": "Berhasil masuk!",
+    "or_continue_with": "Atau lanjutkan dengan",
+    "no_internet": "Tidak ada koneksi internet",
+    "toast": {
+      "error_login": "Gagal masuk. Periksa email dan kata sandi Anda.",
+      "error_register": "Gagal mendaftar. Silakan coba lagi.",
+      "error_forgot": "Gagal mengirim tautan reset. Periksa email Anda.",
+      "success_forgot": "Tautan reset kata sandi telah dikirim ke email Anda.",
+      "error_reset": "Gagal mereset kata sandi. Tautan mungkin sudah kedaluwarsa.",
+      "success_reset": "Kata sandi berhasil direset! Silakan masuk.",
+      "error_logout": "Gagal keluar"
+    },
+    "error": {
+      "invalid_email": "Format email tidak valid",
+      "invalid_password": "Kata sandi minimal 6 karakter",
+      "password_mismatch": "Kata sandi tidak cocok",
+      "required": "Field ini wajib diisi",
+      "email_exists": "Email sudah terdaftar",
+      "username_exists": "Nama pengguna sudah digunakan",
+      "wrong_credentials": "Email atau kata sandi salah",
+      "weak_password": "Kata sandi terlalu lemah"
+    }
+  },
+  "home": {
+    "greeting": "Halo,",
+    "stats": "Statistik Saya",
+    "recent_activity": "Aktivitas Terbaru",
+    "leaderboard": "Papan Skor",
+    "hof": "Hall of Fame",
+    "event_quest": "Quest Event",
+    "daily_quest": "Quest Harian",
+    "my_progress": "Progres Saya",
+    "day_streak": "Streak Harian",
+    "level": "Level",
+    "xp": "XP",
+    "next_level": "Level Berikutnya",
+    "total_commission": "Total Komisi",
+    "total_transactions": "Total Transaksi",
+    "total_listings": "Total Listing",
+    "total_prospects": "Total Prospek",
+    "quests_done": "Quest Selesai",
+    "view_all": "Lihat Semua",
+    "this_month": "Bulan Ini",
+    "toast": {
+      "error_load_stats": "Gagal memuat statistik",
+      "error_load_activity": "Gagal memuat aktivitas terbaru",
+      "error_load_leaderboard": "Gagal memuat papan skor",
+      "error_load_hof": "Gagal memuat Hall of Fame",
+      "refresh_success": "Beranda berhasil diperbarui"
+    },
+    "period": {
+      "month": "Bulan Ini",
+      "year": "Tahun Ini",
+      "all": "Semua Waktu"
+    },
+    "activity_empty": {
+      "title": "Belum Ada Aktivitas",
+      "description": "Mulai quest atau buat listing untuk melihat aktivitas Anda di sini."
+    },
+    "hof_empty": {
+      "title": "Belum Ada Pemenang",
+      "description": "Data Hall of Fame akan muncul setelah periode berakhir."
+    },
+    "error": {
+      "hof": "Gagal memuat Hall of Fame",
+      "event_quest": "Gagal memuat quest event",
+      "daily_quest": "Gagal memuat quest harian",
+      "leaderboard": "Gagal memuat papan skor",
+      "progress": "Gagal memuat progres",
+      "stats": "Gagal memuat statistik",
+      "activity": "Gagal memuat aktivitas"
+    },
+    "empty": {
+      "hof": "Hall of Fame belum tersedia",
+      "leaderboard": "Papan skor belum tersedia",
+      "activity": "Belum ada aktivitas",
+      "activity_desc": "Aktivitas terbaru akan muncul di sini"
+    },
+    "stats": {
+      "total_prospects": "Total Prospek",
+      "recruitment": "Rekrutmen",
+      "training": "Training",
+      "day_streak": "Streak Harian"
+    },
+    "leaderboard_search": "Cari agen...",
+    "stats_view_profile": "Lihat Profil",
+    "quick_actions": "Aksi Cepat"
+  },
+  "quest": {
+    "title": "Quest",
+    "daily": "Harian",
+    "weekly": "Mingguan",
+    "event": "Event",
+    "achievement": "Pencapaian",
+    "claim": "Klaim",
+    "completed": "Selesai",
+    "locked": "Terkunci",
+    "in_progress": "Sedang Berjalan",
+    "xp_reward": "Hadiah XP",
+    "badge_reward": "Hadiah Lencana",
+    "ends_in": "Berakhir dalam",
+    "progress": "Progres",
+    "toast": {
+      "error_load": "Gagal memuat quest",
+      "error_claim": "Gagal mengklaim hadiah",
+      "success_claim": "Hadiah berhasil diklaim!",
+      "error_start": "Gagal memulai quest"
+    },
+    "empty": {
+      "title": "Tidak Ada Quest",
+      "description": "Belum ada quest tersedia saat ini. Cek kembali nanti!"
+    },
+    "detail": {
+      "title": "Detail Quest",
+      "requirement": "Syarat",
+      "reward": "Hadiah",
+      "deadline": "Batas Waktu",
+      "steps": "Langkah",
+      "how_to_complete": "Cara Menyelesaikan",
+      "start": "Mulai Quest",
+      "already_claimed": "Sudah Diklaim"
+    },
+    "status": {
+      "not_started": "Belum Dimulai",
+      "in_progress": "Sedang Berjalan",
+      "completed": "Selesai",
+      "locked": "Terkunci",
+      "claimed": "Diklaim",
+      "active": "Berjalan",
+      "expired": "Kadaluarsa"
+    },
+    "search": "Cari quest...",
+    "error": {
+      "load": "Gagal memuat quest"
+    },
+    "search_empty": {
+      "title": "Tidak ada hasil",
+      "description": "Coba gunakan kata kunci lain"
+    },
+    "claim_confirm": {
+      "title": "Klaim Hadiah",
+      "cancel": "Batal"
+    }
+  },
+  "academy": {
+    "title": "Akademi",
+    "categories": {
+      "all": "Semua",
+      "product_knowledge": "Product Knowledge",
+      "sales_technique": "Sales Technique",
+      "marketing": "Marketing",
+      "market_update": "Market Update",
+      "company": "Company"
+    },
+    "completed": "Selesai",
+    "locked": "Terkunci",
+    "xp_reward": "Hadiah XP",
+    "duration": "Durasi",
+    "minutes": "menit",
+    "start": "Mulai",
+    "watch_again": "Tonton Lagi",
+    "toast": {
+      "error_load": "Gagal memuat materi akademi",
+      "error_load_detail": "Gagal memuat detail materi",
+      "error_start": "Gagal memulai materi",
+      "success_complete": "Materi selesai! Hadiah XP telah ditambahkan.",
+      "error_complete": "Gagal menandai selesai",
+      "error_mark": "Gagal menandai materi",
+      "module_complete": "Modul selesai!",
+      "video_complete": "Video selesai!",
+      "xp_prefix": "XP"
+    },
+    "empty": {
+      "title": "Belum Ada Materi",
+      "description": "Materi akademi akan segera tersedia."
+    },
+    "search_placeholder": "Cari materi...",
+    "search": "Cari",
+    "search_empty": {
+      "title": "Tidak ada hasil",
+      "for": "untuk",
+      "try_other": "Coba gunakan kata kunci lain"
+    },
+    "mark_complete": "Tandai Selesai",
+    "continue": "Lanjutkan",
+    "all_categories": "Semua Kategori",
+    "duration_format": "{{minutes}} menit",
+    "level_requirement": "Level 20+",
+    "xp_after_complete": "XP setelah selesai",
+    "error": {
+      "load": "Gagal memuat materi akademi"
+    },
+    "button": {
+      "restart": "Ulangi",
+      "next_material": "Materi Selanjutnya"
+    }
+  },
+  "leaderboard": {
+    "title": "Papan Skor",
+    "bulanan": "Bulanan",
+    "all_time": "All-Time",
+    "rank": "Peringkat",
+    "agent": "Agen",
+    "commission": "Komisi",
+    "transactions": "Transaksi",
+    "you": "Anda",
+    "no_data": "Belum ada data",
+    "top_commission": "Top Commission",
+    "top_unit": "Top Unit",
+    "top_primary": "Top Primary",
+    "rising_star": "Rising Star",
+    "search_agent": "Cari agent...",
+    "toast": {
+      "error_load": "Gagal memuat papan skor"
+    },
+    "search_placeholder": "Cari agen...",
+    "filter": {
+      "all_cabang": "Semua Cabang",
+      "all_team": "Semua Tim"
+    },
+    "empty": {
+      "title": "Belum Ada Data",
+      "description": "Data papan skor akan muncul setelah agen mulai bertransaksi."
+    },
+    "error": {
+      "load": "Gagal memuat papan skor"
+    },
+    "all_branch": "Semua Cabang",
+    "all_team": "Semua Tim",
+    "no_results": "Tidak ada hasil yang ditemukan",
+    "my_rank": "Peringkat Saya",
+    "score": "Skor",
+    "points": "Poin",
+    "view_profile": "Lihat Profil",
+    "this_week": "Minggu Ini",
+    "this_month": "Bulan Ini"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Edit Profil",
+    "change_photo": "Ganti Foto",
+    "personal_info": "Informasi Pribadi",
+    "stats": "Statistik",
+    "badges": "Lencana",
+    "referral_code": "Kode Referral",
+    "share_profile": "Bagikan Profil",
+    "settings": "Pengaturan",
+    "language": "Bahasa",
+    "notifications": "Notifikasi",
+    "about": "Tentang",
+    "version": "Versi",
+    "toast": {
+      "error_load": "Gagal memuat profil",
+      "success_save": "Profil berhasil diperbarui!",
+      "error_save": "Gagal menyimpan profil",
+      "success_photo": "Foto profil berhasil diperbarui",
+      "error_photo": "Gagal mengubah foto profil",
+      "copy_referral": "Kode referral disalin!",
+      "download_card": "Kartu profil berhasil diunduh",
+      "share_error": "Gagal membagikan profil"
+    },
+    "confirm": {
+      "logout_title": "Konfirmasi Keluar",
+      "logout_message": "Apakah Anda yakin ingin keluar?"
+    },
+    "job_title": "Jabatan",
+    "phone": "Nomor Telepon",
+    "email_display": "Email",
+    "join_date": "Bergabung Sejak",
+    "member_since": "Anggota Sejak",
+    "career_stats": "Statistik Karir",
+    "career": {
+      "title": "Statistik Karir",
+      "unit_sold": "Unit Terjual",
+      "total_recruit": "Total Rekrut",
+      "training": "Training"
+    },
+    "info": {
+      "cabang": "Cabang",
+      "team": "Tim",
+      "joined": "Bergabung",
+      "rank": "Peringkat"
+    },
+    "action": {
+      "create_poster": "Buat Poster",
+      "my_badges": "Lencana Saya",
+      "activity_history": "Riwayat Aktivitas"
+    },
+    "featured_badges": "Lencana Unggulan",
+    "featured_badges_empty": "Belum ada lencana unggulan",
+    "featured_badges_manage": "Kelola Lencana Unggulan",
+    "hof_history": "Riwayat Hall of Fame",
+    "loading_error": "Gagal memuat profil",
+    "logout": "Keluar",
+    "logout_confirm": {
+      "title": "Konfirmasi Keluar",
+      "description": "Apakah Anda yakin ingin keluar?",
+      "confirm": "Ya, Keluar"
+    },
+    "share": {
+      "label": "Bagikan Profil",
+      "listing": "Listing",
+      "commission": "Komisi",
+      "level": "Level"
+    },
+    "stats": {
+      "listing": "Listing",
+      "commission": "Komisi",
+      "quest_done": "Quest Selesai",
+      "badges": "Lencana"
+    },
+    "period": {
+      "this_month": "Bulan Ini",
+      "all_time": "Semua Waktu"
+    },
+    "stat": {
+      "level": "Level",
+      "xp": "XP",
+      "rank": "Peringkat",
+      "quest_done": "Quest Selesai",
+      "day_streak": "Streak Harian",
+      "total_commission": "Total Komisi",
+      "total_transactions": "Total Transaksi",
+      "total_listings": "Total Listing",
+      "total_prospects": "Total Prospek"
+    },
+    "no_badges": "Belum memiliki lencana",
+    "edit_photo": "Edit Foto",
+    "view_full_profile": "Lihat Profil Lengkap",
+    "save_photo": "Simpan Foto"
+  },
+  "badges": {
+    "title": "Lencana",
+    "common": "Umum",
+    "rare": "Langka",
+    "epic": "Epic",
+    "legendary": "Legendary",
+    "featured": "Unggulan",
+    "all": "Semua",
+    "earned": "Diperoleh",
+    "locked": "Terkunci",
+    "no_badges": "Belum ada lencana",
+    "toast": {
+      "error_load": "Gagal memuat lencana",
+      "success_feature": "Lencana berhasil diunggulkan",
+      "error_feature": "Gagal mengunggulkan lencana",
+      "success_unfeature": "Lencana berhasil dihapus dari unggulan",
+      "error_unfeature": "Gagal menghapus lencana dari unggulan"
+    },
+    "search_placeholder": "Cari lencana...",
+    "empty": {
+      "title": "Tidak Ada Lencana",
+      "description": "Selesaikan quest untuk mendapatkan lencana."
+    },
+    "modal": {
+      "title": "Detail Lencana",
+      "how_to_earn": "Cara Mendapatkan",
+      "description": "Deskripsi",
+      "date_earned": "Tanggal Diperoleh"
+    },
+    "confirm": {
+      "feature_title": "Unggulkan Lencana",
+      "feature_message": "Lencana ini akan ditampilkan di profil Anda.",
+      "unfeature_title": "Hapus Unggulan",
+      "unfeature_message": "Lencana tidak akan ditampilkan lagi di profil Anda."
+    },
+    "feature": "Unggulkan",
+    "unfeature": "Hapus Unggulan",
+    "featured_count": "{{count}} dari {{max}} unggulan",
+    "no_results": "Tidak ada lencana yang cocok",
+    "no_results_desc": "Tidak ada lencana yang cocok dengan pencarian Anda."
+  },
+  "support": {
+    "title": "Bantuan",
+    "faq": "Pertanyaan Umum (FAQ)",
+    "contact": "Hubungi Kami",
+    "contact_chat": "Chat dengan Kami",
+    "report": "Laporkan Masalah",
+    "description": "Ada yang bisa kami bantu?",
+    "toast": {
+      "error_load": "Gagal memuat halaman bantuan",
+      "success_send": "Pesan berhasil dikirim! Kami akan menghubungi Anda segera.",
+      "error_send": "Gagal mengirim pesan. Silakan coba lagi."
+    },
+    "faq_items": {
+      "q1": "Bagaimana cara mengklaim hadiah quest?",
+      "a1": "Buka halaman Quest, selesaikan quest yang tersedia, lalu klik tombol Klaim pada quest yang sudah selesai.",
+      "q2": "Bagaimana cara menambah listing properti?",
+      "a2": "Buka halaman Listing, klik Tambah Listing, lalu isi form dengan data properti Anda.",
+      "q3": "Bagaimana cara menghitung komisi?",
+      "a3": "Komisi dihitung berdasarkan total transaksi yang berhasil Anda lakukan dalam periode tertentu.",
+      "q4": "Apa itu XP dan bagaimana cara mendapatkannya?",
+      "a4": "XP adalah poin pengalaman yang bisa didapatkan dengan menyelesaikan quest, materi akademi, dan transaksi.",
+      "q5": "Bagaimana cara mengubah kata sandi?",
+      "a5": "Buka Profil > Pengaturan, lalu pilih opsi Ubah Kata Sandi."
+    },
+    "contact_form": {
+      "name": "Nama",
+      "name_placeholder": "Masukkan nama Anda",
+      "email": "Email",
+      "email_placeholder": "Masukkan email Anda",
+      "phone": "Telepon",
+      "phone_placeholder": "Masukkan nomor telepon",
+      "message": "Pesan",
+      "message_placeholder": "Tulis pesan Anda...",
+      "title": "Formulir Kontak",
+      "description": "Isi form di bawah untuk menghubungi kami",
+      "placeholder": "Tulis pesan Anda..."
+    },
+    "transaction": {
+      "title": "Transaksi",
+      "description": "Butuh bantuan terkait transaksi? Hubungi tim support kami."
+    },
+    "report_form": {
+      "category": "Kategori",
+      "category_placeholder": "Pilih kategori",
+      "category_technical": "Masalah Teknis",
+      "category_billing": "Masalah Tagihan",
+      "category_account": "Masalah Akun",
+      "category_other": "Lainnya",
+      "description_label": "Deskripsi Masalah",
+      "description_placeholder": "Jelaskan masalah yang Anda alami..."
+    },
+    "claim_commission": "Klaim Komisi",
+    "commission_form": "Formulir Komisi",
+    "drive": "Drive",
+    "marketing_materials": "Materi Marketing",
+    "no_transactions": "Belum ada transaksi",
+    "transaction": "Transaksi",
+    "transactions": "Transaksi",
+    "report_button": "Laporkan",
+    "report_description": "Jelaskan masalah yang Anda alami"
+  },
+  "poster": {
+    "title": "Poster",
+    "generate": "Buat Poster",
+    "download": "Unduh",
+    "share": "Bagikan",
+    "preview": "Pratinjau",
+    "toast": {
+      "error_load": "Gagal memuat poster",
+      "error_generate": "Gagal membuat poster",
+      "success_generate": "Poster berhasil dibuat!",
+      "error_download": "Gagal mengunduh poster",
+      "success_download": "Poster berhasil diunduh",
+      "downloaded": "Poster berhasil diunduh",
+      "error_share": "Gagal membagikan poster",
+      "success_share": "Poster berhasil dibagikan",
+      "link_copied": "Tautan poster disalin!"
+    },
+    "description": "Buat poster profesional untuk branding Anda.",
+    "description_placeholder": "Tambahkan deskripsi...",
+    "job_title": "Jabatan",
+    "job_title_placeholder": "Masukkan jabatan Anda",
+    "logo": "Logo",
+    "scan_text": "Scan untuk menghubungi saya",
+    "share_label": "Bagikan Poster",
+    "qr_code": "Kode QR",
+    "agent_name": "Nama Agen",
+    "agent_label": "Agen",
+    "level": "Level",
+    "scan_hint": "Scan untuk menghubungi saya",
+    "edit_poster": "Edit Poster",
+    "style": "Gaya",
+    "style_classic": "Klasik",
+    "style_modern": "Modern",
+    "style_elegant": "Elegan",
+    "name_label": "Nama",
+    "phone_label": "Telepon",
+    "email_label": "Email",
+    "select_template": "Pilih Template",
+    "customize": "Sesuaikan",
+    "save_template": "Simpan Template"
+  },
+  "chat": {
+    "title": "Chat",
+    "placeholder": "Ketik pesan...",
+    "send": "Kirim",
+    "empty": "Belum ada pesan. Mulai percakapan!",
+    "toast": {
+      "error_load": "Gagal memuat pesan",
+      "error_send": "Gagal mengirim pesan. Silakan coba lagi.",
+      "error_load_conversation": "Gagal memuat percakapan"
+    },
+    "announcement": {
+      "title": "Pengumuman",
+      "empty": "Belum ada pengumuman"
+    },
+    "empty_state": {
+      "title": "Belum Ada Percakapan",
+      "description": "Mulai percakapan dengan menghubungi agen lain atau tim support."
+    },
+    "typing": "sedang mengetik...",
+    "new_message": "Pesan Baru",
+    "today": "Hari Ini",
+    "yesterday": "Kemarin"
+  },
+  "hall_of_fame": {
+    "title": "Hall of Fame",
+    "bulanan": "Bulanan",
+    "all_time": "All-Time",
+    "rising_star": "Rising Star",
+    "admin_pick": "Pilihan Admin",
+    "top_commission": "Top Commission",
+    "top_unit": "Top Unit",
+    "top_primary": "Top Primary",
+    "rank_1": "Juara 1",
+    "rank_2": "Juara 2",
+    "rank_3": "Juara 3",
+    "toast": {
+      "error_load": "Gagal memuat Hall of Fame"
+    },
+    "error": {
+      "load": "Gagal memuat Hall of Fame"
+    },
+    "empty": {
+      "title": "Belum Ada Pemenang",
+      "description": "Pemenang akan ditampilkan setelah periode berakhir."
+    },
+    "poster_button": "Buat Poster",
+    "congratulations": "Selamat kepada para pemenang!",
+    "period": {
+      "monthly": "Bulanan",
+      "all_time": "All-Time"
+    },
+    "category": {
+      "rising_star": "Rising Star",
+      "admin_pick": "Pilihan Admin"
+    }
+  },
+  "notification": {
+    "title": "Notifikasi",
+    "empty": "Tidak ada notifikasi",
+    "mark_read": "Tandai Dibaca",
+    "mark_all_read": "Semua Dibaca",
+    "all": "Semua",
+    "unread": "Belum Dibaca",
+    "toast": {
+      "error_load": "Gagal memuat notifikasi",
+      "error_mark_read": "Gagal menandai notifikasi",
+      "success_mark_read": "Notifikasi ditandai telah dibaca",
+      "error_mark": "Gagal menandai notifikasi",
+      "success_mark_all": "Semua notifikasi telah ditandai dibaca"
+    },
+    "filter": {
+      "all": "Semua",
+      "unread": "Belum Dibaca",
+      "read": "Sudah Dibaca"
+    },
+    "empty_state": {
+      "title": "Tidak Ada Notifikasi",
+      "description": "Anda akan menerima notifikasi tentang quest, hadiah, dan aktivitas lainnya."
+    },
+    "empty": {
+      "title": "Tidak Ada Notifikasi",
+      "all_read": "Semua notifikasi sudah dibaca",
+      "none": "Belum ada notifikasi"
+    },
+    "unread_count": "{{count}} belum dibaca",
+    "unread": "Belum Dibaca",
+    "confirm_mark_all_read": "Tandai semua notifikasi sebagai sudah dibaca?",
+    "just_now": "Baru saja",
+    "minutes_ago": "{{minutes}} menit yang lalu",
+    "hours_ago": "{{hours}} jam yang lalu",
+    "days_ago": "{{days}} hari yang lalu"
+  },
+  "common": {
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "retry": "Coba Lagi",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "delete": "Hapus",
+    "confirm": "Konfirmasi",
+    "search": "Cari...",
+    "no_data": "Tidak ada data",
+    "monthly": "Bulanan",
+    "reload": "Muat ulang",
+    "commission": "Komisi",
+    "xp": "XP",
+    "days": "hari",
+    "back": "Kembali",
+    "next": "Lanjut",
+    "skip": "Lewati",
+    "done": "Selesai",
+    "close": "Tutup",
+    "load_more": "Muat Lainnya",
+    "send": "Kirim"
+  },
+  "listing": {
+    "title": "Listing",
+    "tab": {
+      "my_listing": "Listing Saya",
+      "prospect": "Prospek"
+    },
+    "tabs": {
+      "all": "Semua",
+      "active": "Aktif",
+      "sold": "Terjual",
+      "expired": "Kadaluarsa",
+      "rent": "Disewa"
+    },
+    "filter": {
+      "all": "Semua",
+      "active": "Aktif",
+      "expired": "Kadaluarsa",
+      "sold": "Terjual"
+    },
+    "sort": {
+      "newest": "Terbaru",
+      "oldest": "Terlama",
+      "highest_price": "Harga Tertinggi",
+      "lowest_price": "Harga Terendah",
+      "cheapest": "Termurah",
+      "expensive": "Termahal"
+    },
+    "status": {
+      "active": "Aktif",
+      "sold": "Terjual",
+      "expired": "Kadaluarsa",
+      "rent": "Disewa",
+      "draft": "Draft",
+      "new": "Baru",
+      "contacted": "Dihubungi",
+      "converted": "Konversi",
+      "lost": "Hilang"
+    },
+    "action": {
+      "edit": "Edit",
+      "delete": "Hapus"
+    },
+    "form": {
+      "title": "Judul Iklan",
+      "title_placeholder": "Masukkan judul listing",
+      "lt": "LT (Luas Tanah)",
+      "lt_placeholder": "Contoh: 100",
+      "lb": "LB (Luas Bangunan)",
+      "lb_placeholder": "Contoh: 80",
+      "lantai": "Lantai",
+      "lantai_placeholder": "Jumlah lantai",
+      "keterangan": "Keterangan",
+      "keterangan_placeholder": "Deskripsikan properti Anda",
+      "price": "Harga",
+      "price_placeholder": "Masukkan harga",
+      "address": "Alamat",
+      "address_placeholder": "Masukkan alamat lengkap",
+      "property_type": "Tipe Properti",
+      "listing_type": "Tipe Listing",
+      "description": "Deskripsi",
+      "description_placeholder": "Tulis deskripsi properti...",
+      "name": "Nama Properti",
+      "city": "Kota",
+      "city_placeholder": "Pilih kota",
+      "province": "Provinsi",
+      "province_placeholder": "Pilih provinsi"
+    },
+    "type": {
+      "rumah": "Rumah",
+      "apartemen": "Apartemen",
+      "tanah": "Tanah",
+      "ruko": "Ruko",
+      "gudang": "Gudang",
+      "kantor": "Kantor"
+    },
+    "confirm": {
+      "delete_title": "Hapus Listing",
+      "delete_message": "Apakah Anda yakin ingin menghapus listing ini? Tindakan ini tidak dapat dibatalkan.",
+      "mark_sold_title": "Tandai Terjual",
+      "mark_sold_message": "Tandai properti ini sebagai terjual?"
+    },
+    "toast": {
+      "error_load": "Gagal memuat listing",
+      "error_load_detail": "Gagal memuat detail listing",
+      "success_save": "Listing berhasil disimpan!",
+      "error_save": "Gagal menyimpan listing",
+      "success_delete": "Listing berhasil dihapus",
+      "error_delete": "Gagal menghapus listing",
+      "success_status": "Status listing berhasil diperbarui",
+      "error_status": "Gagal memperbarui status listing",
+      "created_listing": "Listing berhasil dibuat",
+      "updated_listing": "Listing berhasil diperbarui",
+      "deleted_listing": "Listing berhasil dihapus",
+      "error_create_listing": "Gagal membuat listing",
+      "error_update_listing": "Gagal memperbarui listing",
+      "created_prospect": "Prospek berhasil dibuat",
+      "updated_prospect": "Prospek berhasil diperbarui",
+      "deleted_prospect": "Prospek berhasil dihapus",
+      "error_create_prospect": "Gagal membuat prospek",
+      "error_update_prospect": "Gagal memperbarui prospek",
+      "require_name": "Nama wajib diisi",
+      "require_phone": "Nomor telepon wajib diisi",
+      "require_owner": "Nama pemilik wajib diisi",
+      "require_address": "Alamat wajib diisi"
+    },
+    "empty": {
+      "title": "Belum Ada Listing",
+      "description": "Buat listing properti pertama Anda untuk mulai menjual.",
+      "filtered_title": "Tidak Ditemukan",
+      "filtered_description": "Tidak ada listing yang cocok dengan filter yang dipilih.",
+      "action": "Buat Listing Baru"
+    },
+    "error": {
+      "load_listings": "Gagal memuat listing",
+      "load_prospects": "Gagal memuat prospek",
+      "update_status": "Gagal memperbarui status"
+    },
+    "modal": {
+      "add_listing": "Tambah Listing",
+      "edit_listing": "Edit Listing",
+      "add_prospect": "Tambah Prospek",
+      "edit_prospect": "Edit Prospek",
+      "save_listing": "Simpan Listing",
+      "save_prospect": "Simpan Prospek",
+      "save_changes": "Simpan Perubahan",
+      "category": {
+        "house": "Rumah",
+        "apartment": "Apartemen",
+        "land": "Tanah",
+        "shop": "Ruko",
+        "commercial": "Komersial"
+      },
+      "type": {
+        "sell": "Jual",
+        "rent": "Sewa"
+      },
+      "field": {
+        "owner_name": "Nama Pemilik",
+        "phone": "Telepon",
+        "address": "Alamat",
+        "price": "Harga",
+        "category": "Kategori",
+        "type": "Tipe",
+        "land_size": "Luas Tanah",
+        "building_size": "Luas Bangunan",
+        "floor": "Lantai",
+        "notes": "Catatan"
+      }
+    },
+    "delete": {
+      "title": "Hapus Listing",
+      "description": "Apakah Anda yakin ingin menghapus listing ini?",
+      "confirm": "Ya, Hapus"
+    },
+    "add_listing": "Tambah Listing",
+    "add_prospect": "Tambah Prospek",
+    "search_listing": "Cari listing...",
+    "search_prospect": "Cari prospek...",
+    "lt": "LT",
+    "lb": "LB",
+    "floor_label": "Lantai",
+    "status_changed": "Status berubah menjadi {{status}}",
+    "prospect_empty": {
+      "title": "Belum Ada Prospek",
+      "description": "Tambahkan prospek baru untuk memulai.",
+      "action": "Tambah Prospek"
+    },
+    "prospect_field": {
+      "name": "Nama",
+      "phone": "Telepon",
+      "source": "Sumber",
+      "notes": "Catatan"
+    },
+    "add_new": "Tambah Listing",
+    "edit": "Edit Listing",
+    "detail": "Detail Listing",
+    "mark_sold": "Tandai Terjual"
+  },
+  "streak": {
+    "days": "hari",
+    "keep_going": "Pertahankan!",
+    "come_back": "Kembali besok untuk streak!"
+  },
+  "level": {
+    "rookie": "Rookie",
+    "junior": "Junior",
+    "senior": "Senior",
+    "elite": "Elite",
+    "super_elite": "Super Elite",
+    "legendary": "LOT Legendary"
+  },
+  "onboarding": {
+    "step_1_title": "Upload Foto Profil",
+    "step_1_desc": "Pilih foto profil Anda untuk memulai perjalanan LOT Quest.",
+    "step1": {
+      "title": "Upload Foto Profil",
+      "desc": "Pilih foto profil Anda untuk memulai perjalanan LOT Quest."
+    },
+    "step_2_title": "Atur Notifikasi",
+    "step_2_desc": "Aktifkan notifikasi agar tidak ketinggalan quest dan reward.",
+    "step2": {
+      "title": "Atur Notifikasi",
+      "desc": "Aktifkan notifikasi agar tidak ketinggalan quest dan reward."
+    },
+    "step_3_title": "Siap!",
+    "step_3_desc": "Anda siap memulai petualangan LOT Quest!",
+    "step3": {
+      "title": "Siap!",
+      "desc": "Anda siap memulai petualangan LOT Quest!"
+    },
+    "upload_photo": "Upload Foto",
+    "upload_hint": "Upload foto profil Anda",
+    "skip_for_now": "Nanti Saja",
+    "skip": "Lewati",
+    "next": "Lanjut",
+    "start": "Mulai",
+    "allow_notifications": "Izinkan Notifikasi",
+    "allow_notification": "Izinkan Notifikasi",
+    "start_journey": "Mulai Petualangan",
+    "welcome_title": "Selamat Datang di LOT Quest!",
+    "welcome_desc": "Platform gamifikasi untuk meningkatkan karir properti Anda.",
+    "greeting": "Halo, {{name}}!"
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "toast": {
+      "error_save": "Gagal menyimpan pengaturan",
+      "success_save": "Pengaturan berhasil disimpan!",
+      "error_load": "Gagal memuat pengaturan",
+      "copy_referral": "Kode referral disalin!",
+      "name_required": "Nama wajib diisi",
+      "password_changed": "Kata sandi berhasil diubah",
+      "password_error": "Gagal mengubah kata sandi",
+      "password_mismatch": "Kata sandi tidak cocok",
+      "password_short": "Kata sandi minimal 6 karakter",
+      "profile_error": "Gagal memperbarui profil",
+      "profile_updated": "Profil berhasil diperbarui"
+    },
+    "section": {
+      "account": "Akun",
+      "notifications": "Notifikasi",
+      "appearance": "Tampilan",
+      "about": "Tentang Aplikasi",
+      "privacy": "Privasi"
+    },
+    "about": {
+      "app_name": "LOT Quest",
+      "description": "Platform gamifikasi untuk agen properti dalam meningkatkan karir dan performa.",
+      "version": "Versi 1.0.0",
+      "website": "Kunjungi Website",
+      "privacy_policy": "Kebijakan Privasi",
+      "terms_of_service": "Syarat dan Ketentuan",
+      "licenses": "Lisensi"
+    },
+    "confirm": {
+      "logout_title": "Keluar Akun",
+      "logout_message": "Apakah Anda yakin ingin keluar dari akun ini?"
+    },
+    "change_password": "Ubah Kata Sandi",
+    "current_password": "Kata Sandi Saat Ini",
+    "current_password_placeholder": "Masukkan kata sandi saat ini",
+    "new_password": "Kata Sandi Baru",
+    "new_password_placeholder": "Masukkan kata sandi baru",
+    "confirm_password": "Konfirmasi Kata Sandi Baru",
+    "confirm_password_placeholder": "Masukkan ulang kata sandi baru",
+    "language": "Bahasa",
+    "language_placeholder": "Pilih bahasa",
+    "notification_settings": "Pengaturan Notifikasi",
+    "save": "Simpan Pengaturan",
+    "account": "Akun",
+    "edit_profile": "Edit Profil",
+    "referral_code": "Kode Referral",
+    "preferences": "Preferensi",
+    "about": "Tentang",
+    "about_app": "Tentang Aplikasi",
+    "about_developer": "Tentang Pengembang",
+    "about_version": "Versi Aplikasi",
+    "logout": "Keluar",
+    "logout_confirm": {
+      "title": "Konfirmasi Keluar",
+      "description": "Apakah Anda yakin ingin keluar?",
+      "confirm": "Ya, Keluar"
+    },
+    "change_password_modal": {
+      "title": "Ubah Kata Sandi",
+      "current": "Kata Sandi Saat Ini",
+      "new": "Kata Sandi Baru",
+      "confirm": "Konfirmasi Kata Sandi",
+      "save": "Simpan"
+    },
+    "edit_profile_modal": {
+      "title": "Edit Profil",
+      "camera_hint": "Ambil foto atau pilih dari galeri",
+      "field_name": "Nama",
+      "field_phone": "Telepon",
+      "save": "Simpan"
+    },
+    "lang_id": "Bahasa Indonesia",
+    "lang_en": "English"
+  },
+  "activity": {
+    "title": "Aktivitas",
+    "load_more": "Muat Lainnya",
+    "filter": {
+      "all": "Semua Aktivitas",
+      "quest": "Quest",
+      "listing": "Listing",
+      "transaction": "Transaksi",
+      "badge": "Lencana",
+      "academy": "Akademi"
+    },
+    "empty": {
+      "title": "Belum Ada Aktivitas",
+      "description": "Aktivitas Anda akan muncul di sini."
+    },
+    "toast": {
+      "error_load": "Gagal memuat aktivitas"
+    },
+    "type": {
+      "quest_completed": "Menyelesaikan quest",
+      "badge_earned": "Mendapatkan lencana",
+      "listing_created": "Membuat listing",
+      "listing_sold": "Listing terjual",
+      "transaction_done": "Melakukan transaksi",
+      "academy_completed": "Menyelesaikan materi akademi",
+      "level_up": "Naik level"
+    }
+  },
+  "agent_detail": {
+    "title": "Detail Agen",
+    "toast": {
+      "error_load": "Gagal memuat detail agen"
+    },
+    "empty": {
+      "title": "Data Tidak Tersedia",
+      "description": "Data agen tidak dapat ditemukan."
+    },
+    "back": "Kembali",
+    "share": "Bagikan Profil",
+    "join_date": "Bergabung Sejak",
+    "section": {
+      "stats": "Statistik",
+      "badges": "Lencana",
+      "listings": "Listing",
+      "activity": "Aktivitas Terbaru"
+    },
+    "stat": {
+      "commission": "Total Komisi",
+      "transactions": "Total Transaksi",
+      "listings": "Total Listing",
+      "prospects": "Total Prospek",
+      "level": "Level",
+      "xp": "XP",
+      "rank": "Peringkat"
+    }
+  },
+  "quest_detail": {
+    "title": "Detail Quest",
+    "toast": {
+      "error_load": "Gagal memuat detail quest"
+    },
+    "empty": {
+      "title": "Quest Tidak Ditemukan",
+      "description": "Quest yang Anda cari tidak tersedia atau telah berakhir."
+    },
+    "back": "Kembali",
+    "section": {
+      "requirement": "Syarat",
+      "reward": "Hadiah",
+      "progress": "Progres",
+      "steps": "Langkah-langkah"
+    },
+    "status": {
+      "not_started": "Belum Dimulai",
+      "in_progress": "Sedang Berjalan",
+      "completed": "Selesai",
+      "locked": "Terkunci",
+      "claimed": "Diklaim"
+    },
+    "button": {
+      "claim": "Klaim Hadiah",
+      "start": "Mulai Quest",
+      "restart": "Ulangi Quest"
+    },
+    "deadline": "Batas Waktu",
+    "steps_completed": "{{completed}} dari {{total}} langkah",
+    "reward_xp": "{{xp}} XP",
+    "reward_badge": "Lencana: {{name}}"
+  },
+  "pwa": {
+    "install_title": "Install LOT Quest",
+    "install_desc": "Tambahkan ke layar utama untuk akses cepat",
+    "install": "Install",
+    "later": "Nanti",
+    "offline": "Anda sedang offline. Beberapa fitur mungkin tidak tersedia."
+  }
+}
