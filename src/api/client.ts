@@ -33,12 +33,17 @@ class ApiClient {
       if (!res.ok) {
         this.token = null;
         localStorage.removeItem('token');
+        sessionStorage.removeItem('token');
         throw new Error('Session expired');
       }
 
       const data = await res.json();
       this.token = data.token;
-      localStorage.setItem('token', data.token);
+      if (localStorage.getItem('token')) {
+        localStorage.setItem('token', data.token);
+      } else {
+        sessionStorage.setItem('token', data.token);
+      }
       return data.token;
     })();
 
@@ -63,29 +68,38 @@ class ApiClient {
       headers['Content-Type'] = 'application/json';
     }
 
-    let response = await fetch(`${BASE_URL}${endpoint}`, {
-      method: options.method || 'GET',
-      headers,
-      body: options.body instanceof FormData
-        ? options.body
-        : options.body ? JSON.stringify(options.body) : undefined,
-    });
+    let response: Response;
+    try {
+      response = await fetch(`${BASE_URL}${endpoint}`, {
+        method: options.method || 'GET',
+        headers,
+        body: options.body instanceof FormData
+          ? options.body
+          : options.body ? JSON.stringify(options.body) : undefined,
+      });
+    } catch {
+      throw new Error('Gagal terhubung ke server. Periksa koneksi Anda.');
+    }
 
     // Auto-refresh on 401
     if (response.status === 401 && this.token) {
       try {
         const newToken = await this.handleRefresh();
         headers['Authorization'] = `Bearer ${newToken}`;
-        response = await fetch(`${BASE_URL}${endpoint}`, {
-          method: options.method || 'GET',
-          headers,
-          body: options.body instanceof FormData
-            ? options.body
-            : options.body ? JSON.stringify(options.body) : undefined,
-        });
+        try {
+          response = await fetch(`${BASE_URL}${endpoint}`, {
+            method: options.method || 'GET',
+            headers,
+            body: options.body instanceof FormData
+              ? options.body
+              : options.body ? JSON.stringify(options.body) : undefined,
+          });
+        } catch {
+          throw new Error('Gagal terhubung ke server. Periksa koneksi Anda.');
+        }
       } catch {
         window.location.href = '/login';
-        throw new Error('Session expired');
+        throw new Error('Sesi berakhir. Silakan login kembali.');
       }
     }
 

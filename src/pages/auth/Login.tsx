@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import { useNotification } from '../../context/NotificationContext';
 import { useLanguage } from '../../context/LanguageContext';
 import { Button } from '../../components/ui/Button';
 import { Input } from '../../components/ui/Input';
@@ -12,22 +11,14 @@ export default function Login() {
   const [remember, setRemember] = useState(false);
   const [loading, setLoading] = useState(false);
   const { login } = useAuth();
-  const { showToast } = useNotification();
   const { t } = useLanguage();
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email.trim() || !password) return;
     setLoading(true);
-    try {
-      await login(email, password, remember);
-      navigate('/home');
-    } catch (err) {
-      showToast('error', err instanceof Error ? err.message : t('auth.toast.error_login'));
-    } finally {
-      setLoading(false);
-    }
+    await login(email, password, remember);
+    navigate('/home');
   };
 
   return (
@@ -38,7 +29,6 @@ export default function Login() {
         placeholder="agent@lotproperty.com"
         value={email}
         onChange={e => setEmail(e.target.value)}
-        required
       />
       <Input
         label={t('auth.password')}
@@ -46,8 +36,6 @@ export default function Login() {
         placeholder="••••••••"
         value={password}
         onChange={e => setPassword(e.target.value)}
-        required
-        minLength={6}
       />
       <Link to="/forgot-password" className="text-xs text-[#FFE082] text-right hover:underline">
         {t('auth.forgot_password')}

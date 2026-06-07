@@ -1,13 +1,38 @@
 import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
-import { api } from '../api/client';
 import type { Agent, RegisterData } from '../types';
+
+const mockAgent: Agent = {
+  id: 1,
+  name: 'John Doe',
+  username: 'johndoe',
+  avatar: null,
+  level: 12,
+  tier: 'Senior',
+  xp: 450,
+  xp_next_level: 1000,
+  total_commission: 750000,
+  total_properties: 5,
+  total_transactions: 12,
+  rank: 5,
+  cabang: 'Jakarta Pusat',
+  team: 'Alpha',
+  joined_at: '2025-01-15T00:00:00Z',
+  referral_code: 'ABCD12',
+  badges: [],
+  featured_badges: [],
+  total_recruit: 3,
+  training_completed: 8,
+  is_legendary: false,
+  created_at: '2025-01-15T00:00:00Z',
+  updated_at: '2025-06-07T00:00:00Z',
+};
 
 interface AuthContextType {
   agent: Agent | null;
   isLoading: boolean;
   isAuthenticated: boolean;
-  login: (email: string, password: string, remember?: boolean) => Promise<void>;
-  register: (data: RegisterData) => Promise<void>;
+  login: (email?: string, password?: string, remember?: boolean) => Promise<void>;
+  register: (data?: RegisterData) => Promise<void>;
   logout: () => void;
 }
 
@@ -18,43 +43,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const token = localStorage.getItem('token') || sessionStorage.getItem('token');
-    if (token) {
-      api.setToken(token);
-      api.get<{ data: Agent }>('/auth/me')
-        .then(res => setAgent(res.data))
-        .catch(() => {
-          localStorage.removeItem('token');
-          sessionStorage.removeItem('token');
-        })
-        .finally(() => setIsLoading(false));
-    } else {
-      setIsLoading(false);
-    }
+    setIsLoading(false);
   }, []);
 
-  const login = async (email: string, password: string, remember = false) => {
-    const res = await api.post<{ token: string; data: Agent }>('/auth/login', { email, password });
-    if (remember) {
-      localStorage.setItem('token', res.token);
-    } else {
-      sessionStorage.setItem('token', res.token);
-    }
-    api.setToken(res.token);
-    setAgent(res.data);
+  const login = async (_email?: string, _password?: string, _remember?: boolean) => {
+    setAgent(mockAgent);
   };
 
-  const register = async (data: RegisterData) => {
-    const res = await api.post<{ token: string; data: Agent }>('/auth/register', data);
-    localStorage.setItem('token', res.token);
-    api.setToken(res.token);
-    setAgent(res.data);
+  const register = async (_data?: RegisterData) => {
+    setAgent(mockAgent);
   };
 
   const logout = () => {
-    localStorage.removeItem('token');
-    sessionStorage.removeItem('token');
-    api.setToken(null);
     setAgent(null);
   };
 
