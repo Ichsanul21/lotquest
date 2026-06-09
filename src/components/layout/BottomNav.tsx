@@ -16,7 +16,7 @@ export function BottomNav() {
   const { t } = useLanguage();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 bg-[#0B0B0F]/90 backdrop-blur-[12px] border-t border-white/10 safe-area-bottom">
+    <nav className="fixed bottom-0 left-0 right-0 z-50 bg-dark-bg/90 backdrop-blur-[12px] border-t border-white/10 safe-area-bottom">
       <div className="flex items-center justify-around max-w-lg mx-auto">
         {navItems.map(item => {
           const isActive = location.pathname.startsWith(item.path);
@@ -27,10 +27,10 @@ export function BottomNav() {
               aria-label={t(item.labelKey)}
               aria-current={isActive ? 'page' : undefined}
               onClick={() => navigate(item.path)}
-              className={`flex flex-col items-center py-2 px-3 min-w-0 transition-colors duration-200 ${isActive ? 'text-[#FFE082]' : 'text-white/40'}`}
+              className={`flex flex-col items-center py-2 px-3 min-w-0 transition-colors duration-200 ${isActive ? 'text-gold-700' : 'text-white/40'}`}
             >
               <Icon className="w-5 h-5 mb-0.5" aria-hidden="true" />
-              <span className={`text-[10px] font-medium ${isActive ? 'text-[#FFE082]' : 'text-white/40'}`}>
+              <span className={`text-[10px] font-medium ${isActive ? 'text-gold-700' : 'text-white/40'}`}>
                 {t(item.labelKey)}
               </span>
             </button>

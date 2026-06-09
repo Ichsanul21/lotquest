@@ -83,7 +83,7 @@ export default function HallOfFame() {
         <div className="flex bg-white/5 rounded-xl p-1">
           {periodOptions.map(p => (
             <button key={p.key} onClick={() => setPeriod(p.key)}
-              className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all ${period === p.key ? 'gold-gradient text-[#0B0B0F]' : 'text-zinc-400'}`}>
+              className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all ${period === p.key ? 'gold-gradient text-dark-bg' : 'text-zinc-400'}`}>
               {t(p.labelKey) || (p.key === 'monthly' ? 'Bulanan' : 'All-Time')}
             </button>
           ))}
@@ -98,7 +98,7 @@ export default function HallOfFame() {
                 <button
                   key={cat.key}
                   onClick={() => setCatIndex(ci)}
-                  className={`snap-center shrink-0 px-4 py-2 rounded-xl text-xs font-medium whitespace-nowrap transition-all ${catIndex === ci ? 'gold-gradient text-[#0B0B0F]' : 'bg-white/10 text-zinc-400'}`}
+                  className={`snap-center shrink-0 px-4 py-2 rounded-xl text-xs font-medium whitespace-nowrap transition-all ${catIndex === ci ? 'gold-gradient text-dark-bg' : 'bg-white/10 text-zinc-400'}`}
                 >
                   <cat.icon className="w-3.5 h-3.5 inline mr-1.5" />
                   {t(cat.labelKey) || cat.labelKey}
@@ -119,7 +119,7 @@ export default function HallOfFame() {
           <Card className="flex items-center gap-3 p-4">
             <AlertCircle className="w-5 h-5 text-red-400 shrink-0" />
             <p className="text-sm text-zinc-400 flex-1">{error}</p>
-            <button onClick={fetchData} className="text-xs text-[#FFE082] shrink-0">{t('common.reload') || 'Muat ulang'}</button>
+            <button onClick={fetchData} className="text-xs text-gold-700 shrink-0">{t('common.reload') || 'Muat ulang'}</button>
           </Card>
         ) : catEntries.length === 0 ? (
           <EmptyState icon={Icon} title={t('common.no_data') || 'Belum ada data'} description={`${t('hall_of_fame.empty.description') || 'Belum ada entry untuk kategori'} ${t(categories[catIndex].labelKey) || categories[catIndex].labelKey}`} />
@@ -131,18 +131,18 @@ export default function HallOfFame() {
                 <div className="absolute top-0 right-0 w-40 h-40 gold-gradient opacity-10 rounded-full -translate-y-1/2 translate-x-1/2" />
                 <div className="relative flex items-center gap-4">
                   <div className="w-16 h-16 rounded-2xl gold-gradient flex items-center justify-center shadow-[0_0_20px_rgba(229,169,60,0.3)]">
-                    <Crown className="w-8 h-8 text-[#0B0B0F]" />
+                    <Crown className="w-8 h-8 text-dark-bg" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <h3 className="text-lg font-semibold text-white">{catEntries[0].agent.name}</h3>
-                      {catEntries[0].is_admin_pick && <Sparkles className="w-4 h-4 text-[#FFE082]" />}
+                      {catEntries[0].is_admin_pick && <Sparkles className="w-4 h-4 text-gold-700" />}
                     </div>
                     <p className="text-xs text-zinc-400">{t(categories[catIndex].labelKey) || categories[catIndex].labelKey}</p>
-                    <p className="text-sm text-[#FFE082] font-bold mt-1">Rp {formatCompact(catEntries[0].total_commission)}</p>
+                    <p className="text-sm text-gold-700 font-bold mt-1">Rp {formatCompact(catEntries[0].total_commission)}</p>
                   </div>
                   <div className="flex flex-col items-center gap-2">
-                    <span className="text-2xl font-extrabold text-[#FFE082]">#1</span>
+                    <span className="text-2xl font-extrabold text-gold-700">#1</span>
                     <Button size="sm" variant="ghost" onClick={() => navigate(`/poster?achievement=${encodeURIComponent(t(categories[catIndex].labelKey) || categories[catIndex].labelKey)}&rank=${catEntries[0].rank}&name=${encodeURIComponent(catEntries[0].agent.name)}`)}>
                       <Share2 className="w-3 h-3 mr-1" /> {t('hall_of_fame.poster_button') || 'Poster'}
                     </Button>
@@ -156,7 +156,7 @@ export default function HallOfFame() {
               {catEntries.slice(1).map(entry => (
                 <Card key={entry.id}>
                   <div className="flex items-center gap-3">
-                    <span className={`w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold ${entry.rank === 1 ? 'gold-gradient text-[#0B0B0F]' : 'bg-white/10 text-zinc-400'}`}>
+                    <span className={`w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold ${entry.rank === 1 ? 'gold-gradient text-dark-bg' : 'bg-white/10 text-zinc-400'}`}>
                       #{entry.rank}
                     </span>
                     <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
@@ -168,7 +168,7 @@ export default function HallOfFame() {
                     </div>
                     <div className="flex gap-1">
                       {entry.is_rising_star && <TrendingUp className="w-4 h-4 text-orange-400" />}
-                      {entry.is_admin_pick && <span className="text-[10px] px-2 py-1 rounded-full bg-[#FFE082]/15 text-[#FFE082]">{t('hall_of_fame.admin_pick') || 'Admin Pick'}</span>}
+                      {entry.is_admin_pick && <span className="text-[10px] px-2 py-1 rounded-full bg-gold-200/15 text-gold-700">{t('hall_of_fame.admin_pick') || 'Admin Pick'}</span>}
                     </div>
                   </div>
                 </Card>

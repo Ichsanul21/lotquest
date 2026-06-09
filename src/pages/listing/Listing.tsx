@@ -1,25 +1,41 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Header } from '../../components/layout/Header';
 import { Card } from '../../components/ui/Card';
-import { Badge } from '../../components/ui/Badge';
 import { Button } from '../../components/ui/Button';
+import { Input } from '../../components/ui/Input';
+import { Badge } from '../../components/ui/Badge';
 import { Skeleton } from '../../components/ui/Skeleton';
 import { EmptyState } from '../../components/ui/EmptyState';
-import { Modal } from '../../components/ui/Modal';
-import { Input } from '../../components/ui/Input';
-import { TabBar } from '../../components/ui/TabBar';
 import { SearchInput } from '../../components/ui/SearchInput';
-import { PullToRefresh } from '../../components/ui/PullToRefresh';
+import { Modal } from '../../components/ui/Modal';
 import { ConfirmDialog } from '../../components/ui/ConfirmDialog';
+import { TabBar } from '../../components/ui/TabBar';
+import { PullToRefresh } from '../../components/ui/PullToRefresh';
+import { HandoverModal } from '../../components/ui/HandoverModal';
 import { listingApi, prospectApi } from '../../api/services';
-import type { Prospect, ListingItem } from '../../types';
 import { useNotification } from '../../context/NotificationContext';
+import { useAuth } from '../../context/AuthContext';
 import { useLanguage } from '../../context/LanguageContext';
-import { Plus, MapPin, Bed, Bath, Maximize, UserPlus, Phone, AlertCircle, ArrowRight, Pencil, Trash2 } from 'lucide-react';
+import type { Prospect, ListingItem } from '../../types';
+import { Plus, MapPin, Bed, Bath, Maximize, UserPlus, Phone, AlertCircle, ArrowRight, Pencil, Trash2, AlertTriangle, Timer } from 'lucide-react';
 
-const statusFlow: Prospect['status'][] = ['New', 'Contacted', 'Converted', 'Lost'];
+const statusFlow: Prospect['status'][] = ['New Lead', 'Follow Up', 'Showing', 'Akad', 'Deal', 'Lost'];
+
+function getReminderInfo(listing: ListingItem): { label: string; color: string; days: number } | null {
+  if (!listing.created_at) return null;
+  const created = new Date(listing.created_at).getTime();
+  const now = Date.now();
+  const daysSinceUpdate = Math.floor((now - created) / 86400000);
+  if (daysSinceUpdate >= 90) return { label: '90+ hari — Inactive', color: 'text-red-400 bg-red-500/10', days: daysSinceUpdate };
+  if (daysSinceUpdate >= 60) return { label: `60 hari — Peringatan`, color: 'text-orange-400 bg-orange-500/10', days: daysSinceUpdate };
+  if (daysSinceUpdate >= 30) return { label: `30 hari — Pengingat`, color: 'text-yellow-400 bg-yellow-500/10', days: daysSinceUpdate };
+  if (daysSinceUpdate >= 14) return { label: `14 hari — Perbarui`, color: 'text-emerald-400 bg-emerald-500/10', days: daysSinceUpdate };
+  return null;
+}
 
 export default function Listing() {
+  const navigate = useNavigate();
   const { t } = useLanguage();
   const [tab, setTab] = useState('listing');
   const [search, setSearch] = useState('');
@@ -168,7 +184,7 @@ export default function Listing() {
               <Card className="flex items-center gap-3 p-4">
                 <AlertCircle className="w-5 h-5 text-red-400 shrink-0" />
                 <p className="text-sm text-zinc-400 flex-1">{errorListings}</p>
-                <button onClick={fetchListings} className="text-xs text-[#FFE082] shrink-0">{t('common.reload') || 'Muat ulang'}</button>
+                <button onClick={fetchListings} className="text-xs text-gold-700 shrink-0">{t('common.reload') || 'Muat ulang'}</button>
               </Card>
             )}
 
@@ -179,7 +195,7 @@ export default function Listing() {
                     <button
                       key={s}
                       onClick={() => setStatusFilter(s)}
-                      className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all ${statusFilter === s ? 'gold-gradient text-[#0B0B0F]' : 'bg-white/10 text-zinc-400'}`}
+                      className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all ${statusFilter === s ? 'gold-gradient text-dark-bg' : 'bg-white/10 text-zinc-400'}`}
                     >
                       {s === 'All' ? (t('listing.filter.all') || 'All') : s === 'Active' ? (t('listing.filter.active') || 'Active') : s === 'Sold' ? (t('listing.filter.sold') || 'Sold') : (t('listing.filter.expired') || 'Expired')}
                     </button>
@@ -212,7 +228,16 @@ export default function Listing() {
                       <h3 className="text-sm font-semibold text-white truncate">{l.title || `${l.owner_name} - ${l.address}`}</h3>
                       <Badge variant={l.status || 'Active'} label={l.status === 'Active' ? (t('listing.filter.active') || 'Active') : l.status === 'Sold' ? (t('listing.filter.sold') || 'Sold') : (t('listing.filter.expired') || 'Expired')} />
                     </div>
-                    <p className="text-sm font-bold text-[#FFE082] mt-1">{l.price || '-'}</p>
+                    <p className="text-sm font-bold text-gold-700 mt-1">{l.price || '-'}</p>
+                    {(() => {
+                      const reminder = getReminderInfo(l);
+                      return reminder ? (
+                        <div className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-medium mt-1 ${reminder.color}`}>
+                          <Timer className="w-3 h-3" />
+                          <span>{reminder.label}</span>
+                        </div>
+                      ) : null;
+                    })()}
                     <div className="flex items-center gap-3 mt-1.5 text-[10px] text-zinc-500">
                       <span className="flex items-center gap-1"><MapPin className="w-3 h-3" />{l.location || l.address || '-'}</span>
                       {l.beds > 0 && <span className="flex items-center gap-1"><Bed className="w-3 h-3" />{l.beds}</span>}
@@ -230,7 +255,7 @@ export default function Listing() {
                 </div>
                 <div className="flex gap-2 mt-3 pt-3 border-t border-white/5">
                   <button
-                    className="flex items-center gap-1.5 text-[10px] text-zinc-400 hover:text-[#FFE082] px-2 py-1 rounded-lg hover:bg-white/5"
+                    className="flex items-center gap-1.5 text-[10px] text-zinc-400 hover:text-gold-700 px-2 py-1 rounded-lg hover:bg-white/5"
                     onClick={() => setEditListing(l)}
                   >
                     <Pencil className="w-3 h-3" /> {t('listing.action.edit') || 'Edit'}
@@ -244,6 +269,37 @@ export default function Listing() {
                 </div>
               </Card>
             ))}
+
+            {/* Reminder Pipeline */}
+            <Card className="p-4">
+              <p className="text-[10px] text-zinc-500 uppercase tracking-wider mb-2">
+                {t('listing.reminder_title') || 'Sistem Reminder Listing'}
+              </p>
+              <p className="text-[10px] text-zinc-500 mb-3">
+                {t('listing.reminder_desc') || 'Jika listing tidak diperbarui secara berkala, sistem akan memberikan peringatan:'}
+              </p>
+              <div className="space-y-2">
+                {[
+                  { days: 14, color: 'bg-emerald-500', label: 'Perbarui Data', desc: 'Belum diperbarui 14 hari' },
+                  { days: 30, color: 'bg-yellow-500', label: 'Pengingat 2', desc: 'Belum ada pembaruan 30 hari' },
+                  { days: 60, color: 'bg-orange-500', label: 'Peringatan 3', desc: 'Belum diperbarui 60 hari' },
+                  { days: 90, color: 'bg-red-500', label: 'Rekomendasi Inactive', desc: '90 hari — otomatis inactive' },
+                ].map(step => (
+                  <div key={step.days} className="flex items-center gap-3 p-2.5 rounded-xl bg-white/5">
+                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${step.color}`}>
+                      <Timer className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs font-medium text-white">
+                        {t('listing.reminder_day') || 'Hari'} {step.days}
+                      </p>
+                      <p className="text-[9px] text-zinc-500">{step.desc}</p>
+                    </div>
+                    <span className="text-[10px] font-medium text-zinc-400">{step.label}</span>
+                  </div>
+                ))}
+              </div>
+            </Card>
           </>
         ) : (
           <>
@@ -271,7 +327,7 @@ export default function Listing() {
               <Card className="flex items-center gap-3 p-4">
                 <AlertCircle className="w-5 h-5 text-red-400 shrink-0" />
                 <p className="text-sm text-zinc-400 flex-1">{errorProspects}</p>
-                <button onClick={fetchProspects} className="text-xs text-[#FFE082] shrink-0">{t('common.reload') || 'Muat ulang'}</button>
+                <button onClick={fetchProspects} className="text-xs text-gold-700 shrink-0">{t('common.reload') || 'Muat ulang'}</button>
               </Card>
             )}
 
@@ -283,12 +339,12 @@ export default function Listing() {
               <Card key={p.id}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl gold-gradient flex items-center justify-center flex-shrink-0">
-                    <span className="text-sm font-bold text-[#0B0B0F]">{p.name[0]}</span>
+                    <span className="text-sm font-bold text-dark-bg">{p.name[0]}</span>
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
                       <h3 className="text-sm font-semibold text-white">{p.name}</h3>
-                      <Badge variant={p.status} label={p.status === 'New' ? (t('listing.status.new') || 'New') : p.status === 'Contacted' ? (t('listing.status.contacted') || 'Contacted') : p.status === 'Converted' ? (t('listing.status.converted') || 'Converted') : (t('listing.status.lost') || 'Lost')} />
+                      <Badge variant={p.status as never} label={p.status} />
                     </div>
                     <div className="flex items-center gap-3 mt-1 text-[10px] text-zinc-500">
                       <span className="flex items-center gap-1"><Phone className="w-3 h-3" />{p.phone}</span>
@@ -306,7 +362,7 @@ export default function Listing() {
                 </div>
                 <div className="flex gap-2 mt-3 pt-3 border-t border-white/5">
                   <button
-                    className="flex items-center gap-1.5 text-[10px] text-zinc-400 hover:text-[#FFE082] px-2 py-1 rounded-lg hover:bg-white/5"
+                    className="flex items-center gap-1.5 text-[10px] text-zinc-400 hover:text-gold-700 px-2 py-1 rounded-lg hover:bg-white/5"
                     onClick={() => setEditProspect(p)}
                   >
                     <Pencil className="w-3 h-3" /> {t('listing.action.edit') || 'Edit'}
@@ -320,6 +376,12 @@ export default function Listing() {
                 </div>
               </Card>
             ))}
+            <button
+              onClick={() => navigate('/prospect')}
+              className="w-full text-xs text-gold-700 py-2 text-center hover:underline"
+            >
+              {t('listing.view_all_prospects') || 'Lihat Semua Prospek →'}
+            </button>
           </>
         )}
       </div>
@@ -468,7 +530,7 @@ function AddProspectModal({ initial, onClose, onSuccess }: { initial?: Prospect 
         await prospectApi.update(initial.id, { name, phone, source: source || 'Manual', notes });
         showToast('success', t('listing.toast.updated_prospect') || 'Prospek berhasil diperbarui');
       } else {
-        await prospectApi.create({ name, phone, status: 'New', source: source || 'Manual', notes });
+        await prospectApi.create({ name, phone, status: 'New Lead', source: source || 'Manual', notes });
         showToast('success', t('listing.toast.created_prospect') || 'Prospek berhasil ditambahkan');
       }
       onSuccess();

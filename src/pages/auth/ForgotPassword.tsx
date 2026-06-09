@@ -36,7 +36,7 @@ export default function ForgotPassword() {
         </div>
         <h2 className="text-lg font-semibold text-white">{t('auth.check_email') || 'Cek Email Anda'}</h2>
         <p className="text-sm text-zinc-400">{t('auth.toast.success_forgot')} {email}</p>
-        <Link to="/login" className="text-sm text-[#FFE082] hover:underline mt-4">{t('auth.back_to_login')}</Link>
+        <Link to="/login" className="text-sm text-gold-700 hover:underline mt-4">{t('auth.back_to_login')}</Link>
       </div>
     );
   }
@@ -46,7 +46,7 @@ export default function ForgotPassword() {
       <p className="text-sm text-zinc-400 mb-2">{t('auth.forgot_desc')}</p>
       <Input label={t('auth.email')} type="email" placeholder="agent@lotproperty.com" value={email} onChange={e => setEmail(e.target.value)} required />
       <Button type="submit" loading={loading} className="w-full mt-2">{t('auth.send_link')}</Button>
-      <Link to="/login" className="text-sm text-[#FFE082] text-center hover:underline mt-2">{t('auth.back_to_login')}</Link>
+      <Link to="/login" className="text-sm text-gold-700 text-center hover:underline mt-2">{t('auth.back_to_login')}</Link>
     </form>
   );
 }

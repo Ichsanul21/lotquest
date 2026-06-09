@@ -54,10 +54,12 @@ export const mockQuests: Quest[] = [
 ];
 
 export const mockProspects: Prospect[] = [
-  { id: 1, name: 'Andi Pratama', phone: '0812-3456-7890', status: 'New', source: 'Instagram', notes: 'Tertarik rumah cluster BSD', created_at: '2026-06-04T00:00:00Z' },
-  { id: 2, name: 'Bunga Citra', phone: '0813-3456-7890', status: 'Contacted', source: 'Walk-in', notes: 'Mau lihat apartemen SCBD', created_at: '2026-06-03T00:00:00Z' },
-  { id: 3, name: 'Dedi Kurniawan', phone: '0814-3456-7890', status: 'Converted', source: 'Referral', notes: 'Sudah deal villa Puncak', created_at: '2026-06-01T00:00:00Z' },
-  { id: 4, name: 'Eko Saputra', phone: '0815-3456-7890', status: 'Lost', source: 'Website', notes: 'Batal beli', created_at: '2026-05-28T00:00:00Z' },
+  { id: 1, name: 'Budi Santoso', phone: '0812-3456-7890', status: 'New Lead', source: 'Instagram', notes: 'Mencari sewa rumah PIK budget 100 juta setahun', created_at: '2026-06-04T00:00:00Z' },
+  { id: 2, name: 'Andi Wijaya', phone: '0813-3456-7890', status: 'Follow Up', source: 'Walk-in', notes: 'Mau lihat apartemen SCBD 2BR', created_at: '2026-06-03T00:00:00Z' },
+  { id: 3, name: 'Jessica Tan', phone: '0814-3456-7890', status: 'Showing', source: 'Referral', notes: 'Sudah survey show unit, minat', created_at: '2026-06-01T00:00:00Z' },
+  { id: 4, name: 'Dedi Kurniawan', phone: '0815-3456-7890', status: 'Akad', source: 'Website', notes: 'Proses akad minggu depan', created_at: '2026-05-28T00:00:00Z' },
+  { id: 5, name: 'Siti Rahma', phone: '0816-3456-7890', status: 'Deal', source: 'Realtor', notes: 'Deal cluster Mewah BSD', created_at: '2026-05-20T00:00:00Z' },
+  { id: 6, name: 'Eko Saputra', phone: '0817-3456-7890', status: 'Lost', source: 'Website', notes: 'Batal beli karena KPR ditolak', created_at: '2026-05-15T00:00:00Z' },
 ];
 
 export const mockModules: AcademyModule[] = [
@@ -68,10 +70,17 @@ export const mockModules: AcademyModule[] = [
 ];
 
 export const mockNotifications: Notification[] = [
-  { id: 1, type: 'quest', title: 'Quest Selesai!', body: 'Anda menyelesaikan "Survey Properti Baru". +50 XP!', read: false, created_at: '2026-06-06T08:00:00Z' },
-  { id: 2, type: 'badge', title: 'Lencana Baru!', body: 'Anda mendapatkan lencana "First Sale"!', read: false, created_at: '2026-06-05T10:00:00Z' },
-  { id: 3, type: 'level_up', title: 'Level Up!', body: 'Selamat! Anda naik ke Level 12.', read: true, created_at: '2026-06-04T00:00:00Z' },
-  { id: 4, type: 'system', title: 'Info Sistem', body: 'Pemeliharaan sistem malam ini pukul 02:00-04:00.', read: true, created_at: '2026-06-03T00:00:00Z' },
+  { id: 1, type: 'quest', category: 'action_required', title: 'Follow Up Hari Ini', body: 'Klien: Budi Santoso — Jam Target: 10.00 WIB', read: false, created_at: '2026-06-06T08:00:00Z' },
+  { id: 2, type: 'quest', category: 'action_required', title: 'Showing Hari Ini', body: 'Klien: Andi Wijaya — Rumah, Jam Target: 15.00 WIB', read: false, created_at: '2026-06-06T07:00:00Z' },
+  { id: 3, type: 'system', category: 'action_required', title: 'Listing Belum Diperbarui', body: 'Listing PIK 2 belum diperbarui selama 14 hari.', read: true, created_at: '2026-06-05T00:00:00Z' },
+  { id: 4, type: 'badge', category: 'achievement', title: 'Badge Unlocked!', body: 'Selamat! Anda mendapatkan badge Listing Supplier.', read: false, created_at: '2026-06-05T10:00:00Z' },
+  { id: 5, type: 'level_up', category: 'achievement', title: 'Level Up!', body: 'Selamat! Anda naik ke level Junior Agent.', read: true, created_at: '2026-06-04T00:00:00Z' },
+  { id: 6, type: 'achievement', category: 'achievement', title: 'Hall of Fame', body: 'Anda masuk Top 5 Recruit — August 2026.', read: true, created_at: '2026-06-03T00:00:00Z' },
+  { id: 7, type: 'achievement', category: 'community', title: 'Michael T. dapat Billionaire Club!', body: 'Rekan Anda berhasil mendapatkan lencana Mythic tertinggi.', read: false, created_at: '2026-06-06T09:00:00Z' },
+  { id: 8, type: 'achievement', category: 'community', title: 'Jessica L. dapat Perfectionist Agent', body: 'Rekan Anda berhasil mendapatkan lencana Legendary.', read: false, created_at: '2026-06-06T08:30:00Z' },
+  { id: 9, type: 'achievement', category: 'community', title: 'Kevin H. dapat The Professor', body: 'Rekan Anda berhasil mendapatkan lencana prestasi.', read: true, created_at: '2026-06-05T00:00:00Z' },
+  { id: 10, type: 'system', category: 'company', title: 'Pesan dari Admin', body: 'Mohon agent lebih responsive dalam membalas pesan customer. Terima kasih!', read: false, created_at: '2026-06-06T10:00:00Z' },
+  { id: 11, type: 'system', category: 'company', title: 'Target Q3', body: 'Pesan dari Management. Target Q3 telah diumumkan. Yuk capai bersama!', read: false, created_at: '2026-06-05T00:00:00Z' },
 ];
 
 export const mockChatMessages: ChatMessage[] = [

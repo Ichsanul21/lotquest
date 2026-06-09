@@ -24,7 +24,7 @@ export function ConfirmDialog({
   const variantStyles = {
     danger: { icon: 'bg-red-500/20 text-red-400', button: 'bg-red-600 hover:bg-red-700' },
     warning: { icon: 'bg-amber-500/20 text-amber-400', button: 'bg-amber-600 hover:bg-amber-700' },
-    default: { icon: 'bg-[#FFE082]/20 text-[#FFE082]', button: 'gold-gradient text-[#0B0B0F]' },
+    default: { icon: 'bg-gold-200/20 text-gold-700', button: 'gold-gradient text-dark-bg' },
   };
 
   const s = variantStyles[variant];

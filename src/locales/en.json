@@ -38,6 +38,8 @@
     "recruit_code": "Recruit Code (optional)",
     "check_email": "Check Your Email",
     "remember_me": "Remember Me",
+    "or": "or",
+    "login_with_google": "Sign in with Google",
     "new_password": "New Password",
     "reset_password": "Reset Password",
     "reset_desc": "Enter your new password.",
@@ -186,6 +188,12 @@
     "claim_confirm": {
       "title": "Claim Reward",
       "cancel": "Cancel"
+    },
+    "claim_commission": {
+      "title": "Claim Commission",
+      "description": "Your commission this month",
+      "action": "Claim Commission",
+      "last_claim": "Last Claim"
     }
   },
   "academy": {
@@ -581,6 +589,10 @@
     "mark_all_read": "Mark All Read",
     "all": "All",
     "unread": "Unread",
+    "action_required": "Action Required",
+    "achievement": "Achievement",
+    "community": "Community",
+    "company": "Company",
     "toast": {
       "error_load": "Failed to load notifications",
       "error_mark_read": "Failed to mark notification",
@@ -809,7 +821,76 @@
     "add_new": "Add Listing",
     "edit": "Edit Listing",
     "detail": "Listing Details",
-    "mark_sold": "Mark as Sold"
+    "mark_sold": "Mark as Sold",
+    "view_all_prospects": "View All Prospects →",
+    "reminder_title": "Listing Reminder",
+    "reminder_desc": "Last updated {{days}} days ago. Update your listing soon.",
+    "reminder_day": "Day"
+  },
+  "prospect": {
+    "title": "Prospects",
+    "all": "All Prospects",
+    "pipeline": "Prospect Pipeline",
+    "new_lead": "New Lead",
+    "follow_up": "Follow Up",
+    "showing": "Showing",
+    "akad": "Akad",
+    "deal": "Deal",
+    "lost": "Lost",
+    "activity_log": "Activity Log",
+    "add": "Add Prospect",
+    "edit": "Edit Prospect",
+    "delete": "Delete Prospect",
+    "search": "Search prospects...",
+    "save_lead": "Save Prospect",
+    "filter_all": "All Statuses",
+    "status": "Status",
+    "source": "Source",
+    "notes": "Notes",
+    "name": "Name",
+    "phone": "Phone",
+    "assignee": "Assigned To",
+    "reminder": "Reminder",
+    "reminder_set": "Set Reminder",
+    "add_reminder": "Add Reminder",
+    "reminder_title": "Reminder Title",
+    "reminder_date": "Reminder Date",
+    "reminder_notes": "Notes",
+    "field": {
+      "name": "Name",
+      "phone": "Phone",
+      "notes": "Notes",
+      "next_action": "Next Action",
+      "date": "Date",
+      "time": "Time"
+    },
+    "empty": {
+      "title": "No Prospects Yet",
+      "description": "Add new prospects to get started."
+    },
+    "error": {
+      "load": "Failed to load prospects",
+      "save": "Failed to save prospect",
+      "delete": "Failed to delete prospect",
+      "update_status": "Failed to update status",
+      "require_name": "Name is required"
+    },
+    "toast": {
+      "created": "Prospect created successfully",
+      "updated": "Prospect updated successfully",
+      "deleted": "Prospect deleted successfully",
+      "error_create": "Failed to create prospect",
+      "error_update": "Failed to update prospect",
+      "error_delete": "Failed to delete prospect",
+      "error_load": "Failed to load prospects"
+    },
+    "legend": "Pipeline Legend",
+    "legend_desc": "Each prospect flows through the following stages. Prospects may exit at any stage if canceled.",
+    "guidelines": "Guidelines",
+    "guideline_1": "Contact prospects within the first 24 hours",
+    "guideline_2": "Follow up at least 3 times before marking as lost",
+    "guideline_3": "Record all interactions with prospects",
+    "guideline_4": "Update prospect status regularly"
   },
   "streak": {
     "days": "days",
@@ -823,6 +904,18 @@
     "elite": "Elite",
     "super_elite": "Super Elite",
     "legendary": "LOT Legendary"
+  },
+  "level_guide": {
+    "title": "Level Guide",
+    "description": "Learn about career tiers and how to earn XP in LOT Quest",
+    "current_level": "Current Level",
+    "to_next_level": "XP to Next Level",
+    "current": "Current Level",
+    "remaining": "Remaining XP",
+    "range": "Level",
+    "requires": "Required",
+    "career_hierarchy": "Career Tiers",
+    "xp_sources": "XP Sources"
   },
   "onboarding": {
     "step_1_title": "Upload Profile Photo",

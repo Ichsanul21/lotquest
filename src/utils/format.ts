@@ -48,11 +48,11 @@ export function getTierColor(level: number): string {
 
 export function getTierGlowClass(tier?: string): string {
   switch (tier) {
-    case 'LOT Legendary': return 'ring-[3px] ring-[#FFE082] ring-offset-2 ring-offset-[#0B0B0F] shadow-[0_0_20px_rgba(255,224,130,0.4)]';
-    case 'Super Elite': return 'ring-[3px] ring-orange-400 ring-offset-2 ring-offset-[#0B0B0F] shadow-[0_0_16px_rgba(251,146,60,0.35)]';
-    case 'Elite': return 'ring-[3px] ring-amber-400 ring-offset-2 ring-offset-[#0B0B0F] shadow-[0_0_12px_rgba(251,191,36,0.3)]';
-    case 'Senior': return 'ring-[2px] ring-emerald-400 ring-offset-2 ring-offset-[#0B0B0F]';
-    case 'Junior': return 'ring-[2px] ring-blue-400 ring-offset-2 ring-offset-[#0B0B0F]';
+    case 'LOT Legendary': return 'ring-[3px] ring-gold-700 ring-offset-2 ring-offset-dark-bg shadow-[0_0_20px_rgba(255,224,130,0.4)]';
+    case 'Super Elite': return 'ring-[3px] ring-orange-400 ring-offset-2 ring-offset-dark-bg shadow-[0_0_16px_rgba(251,146,60,0.35)]';
+    case 'Elite': return 'ring-[3px] ring-amber-400 ring-offset-2 ring-offset-dark-bg shadow-[0_0_12px_rgba(251,191,36,0.3)]';
+    case 'Senior': return 'ring-[2px] ring-emerald-400 ring-offset-2 ring-offset-dark-bg';
+    case 'Junior': return 'ring-[2px] ring-blue-400 ring-offset-2 ring-offset-dark-bg';
     default: return '';
   }
 }

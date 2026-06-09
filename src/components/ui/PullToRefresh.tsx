@@ -56,7 +56,7 @@ export function PullToRefresh({ children, onRefresh, threshold = 80 }: PullToRef
         className="flex items-center justify-center transition-all duration-300 overflow-hidden"
         style={{ height: pullDist, opacity: pullDist > 0 ? 1 : 0 }}
       >
-        <RefreshCw className={`w-5 h-5 text-[#FFE082] ${refreshing ? 'animate-spin' : ''}`} />
+        <RefreshCw className={`w-5 h-5 text-gold-700 ${refreshing ? 'animate-spin' : ''}`} />
       </div>
       {children}
     </div>

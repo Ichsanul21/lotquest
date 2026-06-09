@@ -9,7 +9,7 @@ export function MainLayout() {
   const location = useLocation();
 
   return (
-    <div className="h-screen bg-[#0B0B0F]">
+    <div className="h-screen bg-dark-bg">
       <OfflineDetector />
       <main className="h-full overflow-y-auto pb-20 max-w-lg mx-auto" style={{ WebkitOverflowScrolling: 'touch' }}>
         <AnimatePresence mode="wait">

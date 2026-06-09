@@ -22,8 +22,8 @@ const rankConfig = {
     bg: 'gold-gradient',
     shadow: 'shadow-[0_0_30px_rgba(255,224,130,0.25)]',
     icon: Trophy,
-    iconColor: 'text-[#0B0B0F]',
-    textColor: 'text-[#FFE082]',
+    iconColor: 'text-dark-bg',
+    textColor: 'text-gold-700',
     label: 'Juara 1',
   },
   2: {
@@ -76,11 +76,11 @@ export function Podium({ entries }: PodiumProps) {
         <div className={`w-full ${cfg.container} ${cfg.bg} rounded-t-2xl mt-2 flex items-start justify-center pt-4 ${cfg.shadow}`}>
           <div className="text-center">
             {entry.rank === 1 && <Icon className={`w-5 h-5 mx-auto mb-1 ${cfg.iconColor}`} />}
-            <span className={`text-lg font-bold ${entry.rank === 1 ? 'text-[#0B0B0F]' : cfg.textColor}`}>
+            <span className={`text-lg font-bold ${entry.rank === 1 ? 'text-dark-bg' : cfg.textColor}`}>
               #{entry.rank}
             </span>
             {entry.value && (
-              <p className={`text-[10px] font-semibold mt-1 ${entry.rank === 1 ? 'text-[#0B0B0F]/70' : 'text-zinc-500'}`}>
+              <p className={`text-[10px] font-semibold mt-1 ${entry.rank === 1 ? 'text-dark-bg/70' : 'text-zinc-500'}`}>
                 {entry.value}
               </p>
             )}

@@ -108,13 +108,52 @@ export default function QuestList() {
       <Header title={t('quest.title') || 'Quest'} showBack />
       <PullToRefresh onRefresh={fetchQuests}>
       <div className="px-4 pt-4 pb-6 space-y-4">
+        {/* Claim Commission Panel */}
+        <Card className="relative overflow-hidden border-gold-700/30">
+          <div className="absolute inset-0 bg-gradient-to-br from-gold-700/10 to-gold-900/5" />
+          <div className="absolute top-4 right-4 w-32 h-32 rounded-full border border-gold-700/10" />
+          <div className="absolute -bottom-6 -right-6 w-40 h-40 rounded-full border-2 border-gold-700/5" />
+          <div className="relative z-10 p-5">
+            <h3 className="text-base font-bold text-gold-700 mb-1">
+              {t('quest.claim_commission.title') || 'Claim Commission'}
+            </h3>
+            <p className="text-xs text-zinc-400 mb-4">
+              {t('quest.claim_commission.description') || 'Submit transaksi untuk claim komisi dan dapatkan XP sesuai tipe transaksi'}
+            </p>
+            <Button className="w-full mb-4">
+              {t('quest.claim_commission.action') || 'CLAIM COMMISSION >'}
+            </Button>
+            <div className="space-y-2">
+              <p className="text-[10px] text-zinc-500 uppercase tracking-wider">
+                {t('quest.claim_commission.last_claim') || 'Last Claim'}
+              </p>
+              <div className="flex gap-2 overflow-x-auto scrollbar-hide -mx-1 px-1 pb-1">
+                {[
+                  { name: 'Rumah BSD', status: 'Approved', xp: 10000 },
+                  { name: 'Apartemen PIK', status: 'Pending', xp: 5000 },
+                ].map(item => (
+                  <div key={item.name} className="flex items-center gap-2 shrink-0 bg-white/5 rounded-xl px-3 py-2">
+                    <div className="min-w-0">
+                      <p className="text-xs font-medium text-white">{item.name}</p>
+                      <p className="text-[9px] text-zinc-500">{item.status}</p>
+                    </div>
+                    <span className={`text-[10px] font-semibold ${item.status === 'Approved' ? 'text-emerald-400' : 'text-gold-700'}`}>
+                      +{item.xp.toLocaleString()} XP
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Card>
+
         {/* Tabs */}
         <div className="flex gap-1 bg-white/5 rounded-xl p-1 overflow-x-auto scrollbar-hide">
           {tabs.map(t => (
             <button
               key={t.key}
               onClick={() => setTab(t.key)}
-              className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all whitespace-nowrap ${tab === t.key ? 'gold-gradient text-[#0B0B0F]' : 'text-zinc-400'}`}
+              className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all whitespace-nowrap ${tab === t.key ? 'gold-gradient text-dark-bg' : 'text-zinc-400'}`}
             >
               {t.label}
             </button>
@@ -143,7 +182,7 @@ export default function QuestList() {
           <Card className="flex items-center gap-3 p-4">
             <AlertCircle className="w-5 h-5 text-red-400 shrink-0" />
             <p className="text-sm text-zinc-400 flex-1">{error}</p>
-            <button onClick={fetchQuests} className="text-xs text-[#FFE082] shrink-0">{t('common.reload') || 'Muat ulang'}</button>
+            <button onClick={fetchQuests} className="text-xs text-gold-700 shrink-0">{t('common.reload') || 'Muat ulang'}</button>
           </Card>
         )}
 
@@ -181,8 +220,8 @@ export default function QuestList() {
             </div>
             <div className="flex items-center gap-3 mb-3">
               <div className="flex items-center gap-1 text-[10px] text-zinc-500">
-                <Zap className="w-3 h-3 text-[#FFE082]" />
-                <span className="text-[#FFE082] font-semibold">+{q.xp_reward} {t('common.xp') || 'XP'}</span>
+                <Zap className="w-3 h-3 text-gold-700" />
+                <span className="text-gold-700 font-semibold">+{q.xp_reward} {t('common.xp') || 'XP'}</span>
               </div>
               {q.badge_reward && (
                 <div className="flex items-center gap-1 text-[10px] text-zinc-500">
@@ -226,8 +265,8 @@ export default function QuestList() {
             <h3 className="text-base font-semibold text-white">{t('quest.claim_confirm.title') || 'Klaim Quest'}</h3>
             <p className="text-sm text-zinc-400">{claimConfirm.title}</p>
             <div className="flex items-center justify-center gap-2 text-sm">
-              <Zap className="w-4 h-4 text-[#FFE082]" />
-              <span className="text-[#FFE082] font-bold">+{claimConfirm.xp_reward} {t('common.xp') || 'XP'}</span>
+              <Zap className="w-4 h-4 text-gold-700" />
+              <span className="text-gold-700 font-bold">+{claimConfirm.xp_reward} {t('common.xp') || 'XP'}</span>
               {claimConfirm.badge_reward && (
                 <><Award className="w-4 h-4 text-purple-400" /><span className="text-purple-400">{claimConfirm.badge_reward.name}</span></>
               )}

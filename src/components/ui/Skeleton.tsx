@@ -30,7 +30,7 @@ export function Avatar({
       {src ? (
         <img src={src} alt={name} className="w-full h-full object-cover" />
       ) : (
-        <div className="w-full h-full bg-gradient-to-br from-[#FFE082] to-[#E5A93C] flex items-center justify-center text-[#0B0B0F] font-bold text-sm">
+        <div className="w-full h-full bg-gradient-to-br from-gold-700 to-gold-900 flex items-center justify-center text-dark-bg font-bold text-sm">
           {initials}
         </div>
       )}

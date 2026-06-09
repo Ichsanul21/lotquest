@@ -6,6 +6,7 @@ import { Button } from '../../components/ui/Button';
 import { useAuth } from '../../context/AuthContext';
 import { useNotification } from '../../context/NotificationContext';
 import { useLanguage } from '../../context/LanguageContext';
+import { QRCodeCanvas } from 'qrcode.react';
 import html2canvas from 'html2canvas';
 import { Download, Share2, Award } from 'lucide-react';
 
@@ -68,7 +69,7 @@ export default function Poster() {
         <Card>
           <p className="text-xs text-zinc-400 text-center mb-4">{t('poster.description') || 'Poster akan menampilkan QR code yang mengarah ke profil Anda'}</p>
 
-          <div ref={posterRef} className="w-full aspect-[9/16] rounded-2xl bg-gradient-to-b from-[#FFE082] to-[#0B0B0F] p-6 flex flex-col items-center text-center overflow-hidden relative">
+          <div ref={posterRef} className="w-full aspect-[9/16] rounded-2xl bg-gradient-to-b from-gold-700 to-dark-bg p-6 flex flex-col items-center text-center overflow-hidden relative">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
 
             <div className="relative z-10 flex flex-col items-center justify-between h-full">
@@ -91,7 +92,7 @@ export default function Poster() {
 
                 {featuredBadge && (
                   <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/10 mb-4">
-                    <Award className="w-4 h-4 text-[#FFE082]" />
+                    <Award className="w-4 h-4 text-gold-700" />
                     <span className="text-[10px] text-white">{featuredBadge.name}</span>
                   </div>
                 )}
@@ -101,12 +102,14 @@ export default function Poster() {
                 <div className="text-xs font-bold text-white/80 tracking-widest mb-2">LOT PROPERTY</div>
 
                 <div className="w-32 h-32 bg-white rounded-2xl flex items-center justify-center mb-3">
-                  <div className="w-28 h-28 bg-white border-2 border-zinc-200 rounded-xl flex items-center justify-center">
-                    <div className="grid grid-cols-5 gap-0.5">
-                      {Array.from({ length: 25 }).map((_, i) => (
-                        <div key={i} className={`w-4 h-4 ${Math.random() > 0.5 ? 'bg-zinc-900' : 'bg-white'} ${i === 12 ? 'bg-[#FFE082]' : ''}`} />
-                      ))}
-                    </div>
+                  <div className="w-28 h-28 bg-white rounded-xl flex items-center justify-center">
+                    <QRCodeCanvas
+                      value={`${window.location.origin}/agent/${agent?.id || ''}`}
+                      size={100}
+                      level="M"
+                      fgColor="#09090b"
+                      style={{ borderRadius: 6 }}
+                    />
                   </div>
                 </div>
                 <p className="text-[10px] text-white/50">{t('poster.scan_hint') || 'Scan untuk lihat profil'}</p>

@@ -31,8 +31,10 @@ export const authApi = {
 
 // ─── Home ────────────────────────────────────────────
 export const homeApi = {
-  hallOfFame: (period?: string) =>
-    api.get<{ data: HallOfFameEntry[] }>(`/home/hall-of-fame?${new URLSearchParams(period ? { period } : {})}`),
+  hallOfFame: (period?: string) => {
+    const params = period ? `?period=${period}` : '';
+    return api.get<{ data: HallOfFameEntry[] }>(`/home/hall-of-fame${params}`);
+  },
 
   leaderboard: (params?: { type?: string; period?: string; cabang?: string; team?: string }) =>
     api.get<{ data: LeaderboardEntry[] }>(`/home/leaderboard?${new URLSearchParams(params as Record<string, string>)}`),

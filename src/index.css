@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-[#0B0B0F] text-zinc-300 font-sans antialiased m-0;
+    @apply bg-dark-bg text-zinc-300 font-sans antialiased m-0;
     -webkit-tap-highlight-color: transparent;
   }
 
@@ -24,15 +24,15 @@
 @layer components {
   .glass-card {
     @apply bg-gradient-to-br from-[rgba(22,22,26,0.7)] to-[rgba(30,30,35,0.5)]
-           backdrop-blur-[12px] border border-white/10 rounded-2xl;
+           backdrop-blur-[12px] border border-dark-border/50 rounded-2xl;
   }
 
   .gold-gradient {
-    @apply bg-gradient-to-br from-[#FFE082] to-[#E5A93C];
+    @apply bg-gradient-to-br from-[#FF9900] to-[#FF5500];
   }
 
   .gold-text {
-    @apply bg-gradient-to-br from-[#FFE082] to-[#E5A93C] bg-clip-text text-transparent;
+    @apply bg-gradient-to-br from-[#FF9900] to-[#FF5500] bg-clip-text text-transparent;
   }
 
   .orange-gradient {
@@ -40,7 +40,7 @@
   }
 
   .btn-primary {
-    @apply bg-gradient-to-br from-[#FFE082] to-[#D4A843] text-[#0B0B0F] font-semibold rounded-xl
+    @apply bg-gradient-to-br from-[#FF9900] to-[#FF5500] text-white font-semibold rounded-xl
            hover:brightness-110 active:scale-[0.97] disabled:opacity-40 disabled:cursor-not-allowed
            transition-all duration-200;
   }
@@ -52,8 +52,8 @@
   }
 
   .btn-ghost {
-    @apply bg-transparent text-[#FFE082] font-semibold rounded-xl
-           hover:bg-[rgba(255,224,130,0.1)] active:bg-[rgba(255,224,130,0.15)]
+    @apply bg-transparent text-gold-700 font-semibold rounded-xl
+           hover:bg-gold-700/10 active:bg-gold-700/15
            disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200;
   }
 
@@ -64,9 +64,9 @@
   }
 
   .input-field {
-    @apply bg-[rgba(255,255,255,0.05)] border border-white/10 rounded-xl
+    @apply bg-[rgba(255,255,255,0.05)] border border-dark-border/50 rounded-xl
            px-4 py-3 text-sm text-white placeholder-gray-500 outline-none
-           focus:border-[#FFE082] focus:ring-1 focus:ring-[#FFE082]/30
+           focus:border-gold-700 focus:ring-1 focus:ring-gold-700/30
            disabled:opacity-50 disabled:cursor-not-allowed
            transition-all duration-200;
   }
@@ -93,5 +93,9 @@
   }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
   }
 }

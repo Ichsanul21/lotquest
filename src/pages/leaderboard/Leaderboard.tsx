@@ -67,7 +67,7 @@ export default function Leaderboard() {
             <button
               key={tab}
               onClick={() => setType(tab)}
-              className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all ${type === tab ? 'gold-gradient text-[#0B0B0F]' : 'text-zinc-400'}`}
+              className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all ${type === tab ? 'gold-gradient text-dark-bg' : 'text-zinc-400'}`}
             >
               {t(tab === 'XP' ? 'leaderboard.xp' : 'leaderboard.commission') || tab}
             </button>
@@ -80,7 +80,7 @@ export default function Leaderboard() {
             <button
               key={p}
               onClick={() => setPeriod(p)}
-              className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all ${period === p ? 'gold-gradient text-[#0B0B0F]' : 'text-zinc-400'}`}
+              className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all ${period === p ? 'gold-gradient text-dark-bg' : 'text-zinc-400'}`}
             >
               {t(p === 'Bulanan' ? 'leaderboard.bulanan' : 'leaderboard.all_time') || p}
             </button>
@@ -146,7 +146,7 @@ export default function Leaderboard() {
           <Card className="flex items-center gap-3 p-4">
             <AlertCircle className="w-5 h-5 text-red-400 shrink-0" />
             <p className="text-sm text-zinc-400 flex-1">{error}</p>
-            <button onClick={fetchData} className="text-xs text-[#FFE082] shrink-0">{t('common.reload') || 'Muat ulang'}</button>
+            <button onClick={fetchData} className="text-xs text-gold-700 shrink-0">{t('common.reload') || 'Muat ulang'}</button>
           </Card>
         )}
 
@@ -169,18 +169,18 @@ export default function Leaderboard() {
                   <div className="relative">
                     <div className={`rounded-xl ${isFirst ? 'gold-gradient' : 'bg-white/10'} ${avatarSize} flex items-center justify-center`}>
                       {isFirst ? (
-                        <Trophy className="w-8 h-8 text-[#0B0B0F]" />
+                        <Trophy className="w-8 h-8 text-dark-bg" />
                       ) : (
                         <Medal className={`w-6 h-6 ${pos === 1 ? 'text-zinc-300' : 'text-orange-400'}`} />
                       )}
                     </div>
-                    {isFirst && <Crown className="absolute -top-2 -right-2 w-5 h-5 text-[#FFE082]" />}
+                    {isFirst && <Crown className="absolute -top-2 -right-2 w-5 h-5 text-gold-700" />}
                   </div>
-                  <p className={`text-[10px] mt-1 truncate max-w-[80px] ${isFirst ? 'text-[#FFE082] font-semibold' : 'text-zinc-400'}`}>{entry.agent.name}</p>
+                  <p className={`text-[10px] mt-1 truncate max-w-[80px] ${isFirst ? 'text-gold-700 font-semibold' : 'text-zinc-400'}`}>{entry.agent.name}</p>
                   <div className={`w-full ${podiumH} rounded-t-2xl mt-2 flex items-start justify-center pt-4 ${isFirst ? 'gold-gradient shadow-[0_0_30px_rgba(255,224,130,0.25)]' : 'bg-gradient-to-t from-zinc-800 to-zinc-700'}`}>
                     <div className="text-center">
-                      <span className={`text-lg font-bold ${isFirst ? 'text-[#0B0B0F]' : 'text-zinc-300'}`}>#{entry.rank}</span>
-                      <p className={`text-[10px] font-semibold mt-1 ${isFirst ? 'text-[#0B0B0F]/70' : 'text-zinc-500'}`}>
+                      <span className={`text-lg font-bold ${isFirst ? 'text-dark-bg' : 'text-zinc-300'}`}>#{entry.rank}</span>
+                      <p className={`text-[10px] font-semibold mt-1 ${isFirst ? 'text-dark-bg/70' : 'text-zinc-500'}`}>
                         Rp {formatCompact(entry.total_commission)}
                       </p>
                     </div>
@@ -197,7 +197,7 @@ export default function Leaderboard() {
             {rest.map(entry => (
               <div
                 key={entry.rank}
-                className={`flex items-center justify-between p-3 rounded-xl ${entry.agent.id === agent?.id ? 'bg-[#FFE082]/10 border border-[#FFE082]/20' : 'glass-card'}`}
+                className={`flex items-center justify-between p-3 rounded-xl ${entry.agent.id === agent?.id ? 'bg-gold-200/10 border border-gold-700/20' : 'glass-card'}`}
               >
                 <div className="flex items-center gap-3">
                   <span className={`w-6 text-center text-sm font-bold ${entry.rank <= 10 ? 'text-zinc-300' : 'text-zinc-500'}`}>#{entry.rank}</span>
@@ -205,7 +205,7 @@ export default function Leaderboard() {
                     <span className="text-xs font-bold text-zinc-400">{entry.agent.name[0]}</span>
                   </div>
                   <div>
-                    <span className={`text-sm ${entry.agent.id === agent?.id ? 'text-[#FFE082]' : 'text-white'}`}>
+                    <span className={`text-sm ${entry.agent.id === agent?.id ? 'text-gold-700' : 'text-white'}`}>
                       {entry.agent.id === agent?.id ? (t('leaderboard.you') || 'Anda') : entry.agent.name}
                     </span>
                   </div>

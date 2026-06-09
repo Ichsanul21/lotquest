@@ -62,7 +62,7 @@ export default function Register() {
       </Button>
       <p className="text-sm text-zinc-400 text-center mt-4">
         {t('auth.has_account')}{' '}
-        <Link to="/login" className="text-[#FFE082] hover:underline">{t('auth.login')}</Link>
+        <Link to="/login" className="text-gold-700 hover:underline">{t('auth.login')}</Link>
       </p>
     </form>
   );

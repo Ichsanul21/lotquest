@@ -61,18 +61,18 @@ export default function QuestDetail() {
         ) : (
           <div className="space-y-5">
             {/* Hero */}
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#FFE082]/20 to-zinc-900 p-6">
+            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gold-700/20 to-zinc-900 p-6">
               <div className="absolute top-4 right-4">
                 <div className={`px-3 py-1 rounded-full text-xs font-medium ${
                   quest.status === 'Completed' ? 'bg-emerald-500/20 text-emerald-400' :
                   quest.status === 'Locked' ? 'bg-zinc-500/20 text-zinc-400' :
-                  'bg-[#FFE082]/20 text-[#FFE082]'
+                  'bg-gold-200/20 text-gold-700'
                 }`}>
                   {quest.status === 'Completed' ? 'Selesai' : quest.status === 'Locked' ? 'Terkunci' : 'Aktif'}
                 </div>
               </div>
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#FFE082] to-amber-600 flex items-center justify-center mb-4">
-                <Target className="w-7 h-7 text-[#0B0B0F]" />
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-gold-700 to-amber-600 flex items-center justify-center mb-4">
+                <Target className="w-7 h-7 text-dark-bg" />
               </div>
               <h2 className="text-xl font-bold text-white mb-1">{quest.title}</h2>
               <p className="text-sm text-zinc-400">{quest.description}</p>

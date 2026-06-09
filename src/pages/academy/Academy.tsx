@@ -202,7 +202,7 @@ export default function Academy() {
             <button
               key={c}
               onClick={() => setCat(c)}
-              className={`px-4 py-2 rounded-xl text-xs font-medium whitespace-nowrap transition-all ${cat === c ? 'gold-gradient text-[#0B0B0F]' : 'bg-white/10 text-zinc-300'}`}
+              className={`px-4 py-2 rounded-xl text-xs font-medium whitespace-nowrap transition-all ${cat === c ? 'gold-gradient text-dark-bg' : 'bg-white/10 text-zinc-300'}`}
             >
               {categoryLabels[c]}
             </button>
@@ -239,7 +239,7 @@ export default function Academy() {
           <Card className="flex items-center gap-3 p-4">
             <AlertCircle className="w-5 h-5 text-red-400 shrink-0" />
             <p className="text-sm text-zinc-400 flex-1">{error}</p>
-            <button onClick={fetchModules} className="text-xs text-[#FFE082] shrink-0">{t('common.reload') || 'Muat ulang'}</button>
+            <button onClick={fetchModules} className="text-xs text-gold-700 shrink-0">{t('common.reload') || 'Muat ulang'}</button>
           </Card>
         )}
 
@@ -256,8 +256,8 @@ export default function Academy() {
         {!loading && !error && filtered.map(m => (
           <Card key={m.id}>
             <div className="flex items-start gap-3">
-              <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${m.completed ? 'bg-emerald-500/15' : m.locked ? 'bg-zinc-800' : 'bg-[#FFE082]/10'}`}>
-                {m.locked ? <Lock className="w-5 h-5 text-zinc-500" /> : <BookOpen className={`w-5 h-5 ${m.completed ? 'text-emerald-400' : 'text-[#FFE082]'}`} />}
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${m.completed ? 'bg-emerald-500/15' : m.locked ? 'bg-zinc-800' : 'bg-gold-200/10'}`}>
+                {m.locked ? <Lock className="w-5 h-5 text-zinc-500" /> : <BookOpen className={`w-5 h-5 ${m.completed ? 'text-emerald-400' : 'text-gold-700'}`} />}
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1">
@@ -268,8 +268,8 @@ export default function Academy() {
                 <p className="text-xs text-zinc-500">{m.category}</p>
                 <div className="flex items-center gap-3 mt-2">
                   <div className="flex items-center gap-1 text-[10px] text-zinc-500">
-                    <Zap className="w-3 h-3 text-[#FFE082]" />
-                    <span className="text-[#FFE082] font-semibold">+{m.xp_reward} {t('common.xp') || 'XP'}</span>
+                    <Zap className="w-3 h-3 text-gold-700" />
+                    <span className="text-gold-700 font-semibold">+{m.xp_reward} {t('common.xp') || 'XP'}</span>
                   </div>
                   <div className="flex items-center gap-1 text-[10px] text-zinc-500">
                     <Clock className="w-3 h-3" />
@@ -307,7 +307,7 @@ export default function Academy() {
                 <div ref={playerContainerRef} className="w-full h-full" />
               ) : (
                 <div className="w-full h-full flex items-center justify-center">
-                  <Play className="w-12 h-12 text-[#FFE082] opacity-50" />
+                  <Play className="w-12 h-12 text-gold-700 opacity-50" />
                 </div>
               )}
             </div>

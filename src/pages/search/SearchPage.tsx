@@ -77,7 +77,7 @@ export default function SearchPage() {
             <button
               key={c.key}
               onClick={() => setCat(c.key)}
-              className={`px-4 py-2 rounded-xl text-xs font-medium whitespace-nowrap transition-all ${cat === c.key ? 'gold-gradient text-[#0B0B0F]' : 'bg-white/10 text-zinc-400'}`}
+              className={`px-4 py-2 rounded-xl text-xs font-medium whitespace-nowrap transition-all ${cat === c.key ? 'gold-gradient text-dark-bg' : 'bg-white/10 text-zinc-400'}`}
             >
               {c.label}
             </button>
@@ -178,7 +178,7 @@ function Section({ title, icon: Icon, children }: { title: string; icon: React.C
   return (
     <div>
       <div className="flex items-center gap-2 mb-2">
-        <Icon className="w-4 h-4 text-[#FFE082]" />
+        <Icon className="w-4 h-4 text-gold-700" />
         <h3 className="text-sm font-semibold text-white">{title}</h3>
       </div>
       <div className="space-y-1">{children}</div>

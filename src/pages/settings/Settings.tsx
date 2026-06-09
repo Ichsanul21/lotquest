@@ -148,13 +148,13 @@ export default function Settings() {
             <div className="flex gap-2">
               <button
                 onClick={() => setLang('id')}
-                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${lang === 'id' ? 'gold-gradient text-[#0B0B0F]' : 'bg-white/10 text-zinc-400'}`}
+                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${lang === 'id' ? 'gold-gradient text-dark-bg' : 'bg-white/10 text-zinc-400'}`}
               >
                 {t('settings.lang_id') || 'Indonesia'}
               </button>
               <button
                 onClick={() => setLang('en')}
-                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${lang === 'en' ? 'gold-gradient text-[#0B0B0F]' : 'bg-white/10 text-zinc-400'}`}
+                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${lang === 'en' ? 'gold-gradient text-dark-bg' : 'bg-white/10 text-zinc-400'}`}
               >
                 {t('settings.lang_en') || 'English'}
               </button>
@@ -189,9 +189,9 @@ export default function Settings() {
                 <Avatar src={avatarPreview || agent?.avatar || null} name={agent?.name || 'Agent'} size="xl" level={agent?.level} tier={agent?.tier} />
                 <button
                   onClick={() => fileInputRef.current?.click()}
-                  className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-[#FFE082] flex items-center justify-center"
+                  className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-gold-200 flex items-center justify-center"
                 >
-                  <Camera className="w-4 h-4 text-[#0B0B0F]" />
+                  <Camera className="w-4 h-4 text-dark-bg" />
                 </button>
               </div>
               <input ref={fileInputRef} type="file" accept="image/*" className="hidden" onChange={handleAvatarChange} />

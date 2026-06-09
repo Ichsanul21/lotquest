@@ -133,7 +133,7 @@ export default function Profile() {
               <h2 className="text-xl font-bold text-white mt-3">{agent?.name || 'Agent Name'}</h2>
               <p className="text-xs text-zinc-400">@{agent?.username || 'username'}</p>
               <div className="flex items-center gap-2 mt-2">
-                <span className="text-sm text-[#FFE082] font-bold">Level {agent?.level || 1}</span>
+                <button onClick={() => navigate('/level-guide')} className="text-sm text-gold-700 font-bold hover:underline">Level {agent?.level || 1}</button>
                 <span className="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-zinc-400">{agent?.tier || 'Rookie'}</span>
               </div>
               <div className="w-full mt-3">
@@ -150,19 +150,19 @@ export default function Profile() {
         {/* Stats Grid */}
         <div className="grid grid-cols-2 gap-3">
           <div className="glass-card p-3 text-center">
-            <p className="text-2xl font-extrabold text-[#FFE082]">{agent?.total_properties || 0}</p>
+            <p className="text-2xl font-extrabold text-gold-700">{agent?.total_properties || 0}</p>
             <p className="text-[10px] text-zinc-400 mt-1">{t('profile.stats.listing') || 'Listing Aktif'}</p>
           </div>
           <div className="glass-card p-3 text-center">
-            <p className="text-2xl font-extrabold text-[#FFE082]">Rp {(agent?.total_commission || 0) >= 1000000 ? `${(agent.total_commission / 1000000).toFixed(1)}M` : (agent?.total_commission || 0).toLocaleString()}</p>
+            <p className="text-2xl font-extrabold text-gold-700">Rp {(agent?.total_commission || 0) >= 1000000 ? `${(agent.total_commission / 1000000).toFixed(1)}M` : (agent?.total_commission || 0).toLocaleString()}</p>
             <p className="text-[10px] text-zinc-400 mt-1">{t('profile.stats.commission') || 'Komisi Bulan Ini'}</p>
           </div>
           <div className="glass-card p-3 text-center">
-            <p className="text-2xl font-extrabold text-[#FFE082]">{agent?.total_transactions || 0}</p>
+            <p className="text-2xl font-extrabold text-gold-700">{agent?.total_transactions || 0}</p>
             <p className="text-[10px] text-zinc-400 mt-1">{t('profile.stats.quest_done') || 'Quest Selesai'}</p>
           </div>
           <div className="glass-card p-3 text-center">
-            <p className="text-2xl font-extrabold text-[#FFE082]">{agent?.badges?.length || 0}</p>
+            <p className="text-2xl font-extrabold text-gold-700">{agent?.badges?.length || 0}</p>
             <p className="text-[10px] text-zinc-400 mt-1">{t('profile.stats.badges') || 'Lencana'}</p>
           </div>
         </div>
@@ -194,7 +194,7 @@ export default function Profile() {
               const b = agent?.featured_badges?.[i];
               return (
                 <div key={i} className="flex-1 flex flex-col items-center gap-1.5">
-                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center ${b ? 'bg-[#FFE082]/10 border border-[#FFE082]/20' : 'bg-zinc-800/50 border border-dashed border-zinc-700'}`}>
+                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center ${b ? 'bg-gold-200/10 border border-gold-700/20' : 'bg-zinc-800/50 border border-dashed border-zinc-700'}`}>
                     {b ? (
                       <span className="text-2xl">{b.name[0]}</span>
                     ) : (
@@ -208,7 +208,7 @@ export default function Profile() {
             })}
           </div>
           {agent?.featured_badges && agent.featured_badges.length < 3 && (
-            <button className="w-full mt-3 text-[10px] text-[#FFE082]/60 hover:text-[#FFE082] text-center" onClick={() => navigate('/badges')}>
+            <button className="w-full mt-3 text-[10px] text-gold-700/60 hover:text-gold-700 text-center" onClick={() => navigate('/badges')}>
               {t('profile.featured_badges_manage') || 'Atur Lencana Unggulan'}
             </button>
           )}
@@ -249,7 +249,7 @@ export default function Profile() {
         {hofHistory.length > 0 && (
           <Card>
             <div className="flex items-center gap-2 mb-3">
-              <Medal className="w-5 h-5 text-[#FFE082]" />
+              <Medal className="w-5 h-5 text-gold-700" />
               <h3 className="text-sm font-semibold text-white">{t('profile.hof_history') || 'Hall of Fame History'}</h3>
             </div>
             <div className="space-y-2">
@@ -259,7 +259,7 @@ export default function Profile() {
                     <p className="text-sm text-white">{h.agent.name}</p>
                     <p className="text-[10px] text-zinc-500">Rank #{h.rank} · {h.period}</p>
                   </div>
-                  <span className="text-xs text-[#FFE082] font-semibold">{h.total_commission.toLocaleString()} IDR</span>
+                  <span className="text-xs text-gold-700 font-semibold">{h.total_commission.toLocaleString()} IDR</span>
                 </div>
               ))}
             </div>
@@ -269,7 +269,7 @@ export default function Profile() {
         {/* Actions */}
         <div className="space-y-2">
           <button className="w-full glass-card p-3 flex items-center justify-between" onClick={() => navigate('/poster')}>
-            <div className="flex items-center gap-3"><Share2 className="w-5 h-5 text-[#FFE082]" /><span className="text-sm text-white">{t('profile.action.create_poster') || 'Buat Poster'}</span></div>
+            <div className="flex items-center gap-3"><Share2 className="w-5 h-5 text-gold-700" /><span className="text-sm text-white">{t('profile.action.create_poster') || 'Buat Poster'}</span></div>
             <ChevronRight className="w-4 h-4 text-zinc-500" />
           </button>
           <button className="w-full glass-card p-3 flex items-center justify-between" onClick={() => navigate('/badges')}>
@@ -301,7 +301,7 @@ export default function Profile() {
       )}
 
       {/* Hidden share card for html2canvas */}
-      <div ref={shareCardRef} className="hidden fixed top-0 left-0 w-[400px] h-[700px] bg-gradient-to-b from-[#FFE082] to-[#0B0B0F] p-8 flex flex-col items-center justify-center text-center">
+      <div ref={shareCardRef} className="hidden fixed top-0 left-0 w-[400px] h-[700px] bg-gradient-to-b from-gold-700 to-dark-bg p-8 flex flex-col items-center justify-center text-center">
         <div className="flex flex-col items-center">
           <div className="w-24 h-24 rounded-3xl bg-white/20 backdrop-blur flex items-center justify-center mb-4">
             <span className="text-4xl font-bold text-white">{agent?.name?.split(' ').map(s => s[0]).join('').slice(0, 2) || 'AG'}</span>

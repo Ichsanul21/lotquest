@@ -52,15 +52,15 @@ export default function AgentDetail() {
           <Card className="flex flex-col items-center gap-3 p-8 text-center">
             <AlertCircle className="w-8 h-8 text-red-400" />
             <p className="text-sm text-zinc-400">{error || 'Agen tidak ditemukan'}</p>
-            <button onClick={() => navigate(-1)} className="text-xs text-[#FFE082]">Kembali</button>
+            <button onClick={() => navigate(-1)} className="text-xs text-gold-700">Kembali</button>
           </Card>
         ) : (
           <>
             {/* Hero */}
             <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-zinc-500/20 to-zinc-900 p-6">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#FFE082] to-amber-600 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-[#0B0B0F]">{agent.name[0]}</span>
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-700 to-amber-600 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-dark-bg">{agent.name[0]}</span>
                 </div>
                 <div>
                   <h2 className="text-lg font-bold text-white">{agent.name}</h2>
@@ -71,7 +71,7 @@ export default function AgentDetail() {
                 </div>
                 {agent.is_legendary && (
                   <div className="ml-auto">
-                    <Crown className="w-6 h-6 text-[#FFE082]" />
+                    <Crown className="w-6 h-6 text-gold-700" />
                   </div>
                 )}
               </div>
@@ -85,7 +85,7 @@ export default function AgentDetail() {
                 <div className="mt-4 p-3 rounded-xl bg-white/5 flex items-center justify-between">
                   <div>
                     <p className="text-[10px] text-zinc-500">Kode Referral</p>
-                    <p className="text-sm font-mono text-[#FFE082]">{agent.referral_code}</p>
+                    <p className="text-sm font-mono text-gold-700">{agent.referral_code}</p>
                   </div>
                   <button onClick={() => handleCopy(agent.referral_code)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">
                     {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4 text-zinc-400" />}
@@ -122,7 +122,7 @@ export default function AgentDetail() {
                 <span className="text-sm font-semibold text-white">{agent.xp} / {agent.xp_next_level}</span>
               </div>
               <div className="w-full h-2 rounded-full bg-white/10 overflow-hidden">
-                <div className="h-full rounded-full bg-gradient-to-r from-[#FFE082] to-[#E5A93C]" style={{ width: `${Math.min(100, (agent.xp / agent.xp_next_level) * 100)}%` }} />
+                <div className="h-full rounded-full bg-gradient-to-r from-gold-700 to-gold-900" style={{ width: `${Math.min(100, (agent.xp / agent.xp_next_level) * 100)}%` }} />
               </div>
             </Card>
 
@@ -134,12 +134,12 @@ export default function AgentDetail() {
                   {agent.featured_badges.map(b => (
                     <div key={b.id} className="text-center">
                       <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-1 ${
-                        b.rarity === 'Legendary' ? 'bg-gradient-to-br from-[#FFE082]/30 to-amber-600/30' :
+                        b.rarity === 'Legendary' ? 'bg-gradient-to-br from-gold-700/30 to-amber-600/30' :
                         b.rarity === 'Epic' ? 'bg-purple-500/20' :
                         b.rarity === 'Rare' ? 'bg-blue-500/20' : 'bg-white/10'
                       }`}>
                         <Award className={`w-5 h-5 ${
-                          b.rarity === 'Legendary' ? 'text-[#FFE082]' :
+                          b.rarity === 'Legendary' ? 'text-gold-700' :
                           b.rarity === 'Epic' ? 'text-purple-400' :
                           b.rarity === 'Rare' ? 'text-blue-400' : 'text-zinc-400'
                         }`} />

@@ -64,7 +64,7 @@ export function LevelUpCelebration({ open, level, tier, onClose }: LevelUpCelebr
               animate={{ rotate: [0, 5, -5, 0], scale: [1, 1.1, 1] }}
               transition={{ duration: 0.6, ease: 'easeInOut' }}
             >
-              <TrendingUp className="w-12 h-12 text-[#0B0B0F]" />
+              <TrendingUp className="w-12 h-12 text-dark-bg" />
             </motion.div>
             <motion.h2
               className="text-3xl font-bold text-white mb-2"
@@ -80,8 +80,8 @@ export function LevelUpCelebration({ open, level, tier, onClose }: LevelUpCelebr
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              <Crown className="w-6 h-6 text-[#FFE082]" />
-              <span className="text-5xl font-bold text-[#FFE082]">{level}</span>
+              <Crown className="w-6 h-6 text-gold-700" />
+              <span className="text-5xl font-bold text-gold-700">{level}</span>
             </motion.div>
             <motion.p
               className="text-sm text-zinc-400"
@@ -89,7 +89,7 @@ export function LevelUpCelebration({ open, level, tier, onClose }: LevelUpCelebr
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.7 }}
             >
-              Selamat! Anda sekarang <span className="text-[#FFE082] font-semibold">{tier}</span>
+              Selamat! Anda sekarang <span className="text-gold-700 font-semibold">{tier}</span>
             </motion.p>
             <motion.div
               className="mt-8"

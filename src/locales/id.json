@@ -38,6 +38,8 @@
     "recruit_code": "Kode Rekrut (opsional)",
     "check_email": "Periksa Email Anda",
     "remember_me": "Ingat Saya",
+    "or": "atau",
+    "login_with_google": "Masuk dengan Google",
     "new_password": "Kata Sandi Baru",
     "reset_password": "Reset Kata Sandi",
     "reset_desc": "Masukkan kata sandi baru Anda.",
@@ -186,6 +188,12 @@
     "claim_confirm": {
       "title": "Klaim Hadiah",
       "cancel": "Batal"
+    },
+    "claim_commission": {
+      "title": "Klaim Komisi",
+      "description": "Komisi Anda bulan ini",
+      "action": "Klaim Komisi",
+      "last_claim": "Klaim Terakhir"
     }
   },
   "academy": {
@@ -581,6 +589,10 @@
     "mark_all_read": "Semua Dibaca",
     "all": "Semua",
     "unread": "Belum Dibaca",
+    "action_required": "Perlu Tindakan",
+    "achievement": "Pencapaian",
+    "community": "Komunitas",
+    "company": "Perusahaan",
     "toast": {
       "error_load": "Gagal memuat notifikasi",
       "error_mark_read": "Gagal menandai notifikasi",
@@ -809,7 +821,76 @@
     "add_new": "Tambah Listing",
     "edit": "Edit Listing",
     "detail": "Detail Listing",
-    "mark_sold": "Tandai Terjual"
+    "mark_sold": "Tandai Terjual",
+    "view_all_prospects": "Lihat Semua Prospek →",
+    "reminder_title": "Pengingat Listing",
+    "reminder_desc": "Terakhir diperbarui {{days}} hari lalu. Segera update listing Anda.",
+    "reminder_day": "Hari"
+  },
+  "prospect": {
+    "title": "Prospek",
+    "all": "Semua Prospek",
+    "pipeline": "Pipeline Prospek",
+    "new_lead": "New Lead",
+    "follow_up": "Follow Up",
+    "showing": "Showing",
+    "akad": "Akad",
+    "deal": "Deal",
+    "lost": "Lost",
+    "activity_log": "Log Aktivitas",
+    "add": "Tambah Prospek",
+    "edit": "Edit Prospek",
+    "delete": "Hapus Prospek",
+    "search": "Cari prospek...",
+    "save_lead": "Simpan Prospek",
+    "filter_all": "Semua Status",
+    "status": "Status",
+    "source": "Sumber",
+    "notes": "Catatan",
+    "name": "Nama",
+    "phone": "Telepon",
+    "assignee": "Ditugaskan Ke",
+    "reminder": "Pengingat",
+    "reminder_set": "Atur Pengingat",
+    "add_reminder": "Tambah Pengingat",
+    "reminder_title": "Judul Pengingat",
+    "reminder_date": "Tanggal Pengingat",
+    "reminder_notes": "Catatan",
+    "field": {
+      "name": "Nama",
+      "phone": "Telepon",
+      "notes": "Catatan",
+      "next_action": "Tindakan Selanjutnya",
+      "date": "Tanggal",
+      "time": "Waktu"
+    },
+    "empty": {
+      "title": "Belum Ada Prospek",
+      "description": "Tambahkan prospek baru untuk memulai."
+    },
+    "error": {
+      "load": "Gagal memuat prospek",
+      "save": "Gagal menyimpan prospek",
+      "delete": "Gagal menghapus prospek",
+      "update_status": "Gagal memperbarui status",
+      "require_name": "Nama wajib diisi"
+    },
+    "toast": {
+      "created": "Prospek berhasil dibuat",
+      "updated": "Prospek berhasil diperbarui",
+      "deleted": "Prospek berhasil dihapus",
+      "error_create": "Gagal membuat prospek",
+      "error_update": "Gagal memperbarui prospek",
+      "error_delete": "Gagal menghapus prospek",
+      "error_load": "Gagal memuat prospek"
+    },
+    "legend": "Legenda Pipeline",
+    "legend_desc": "Setiap prospek mengalir melalui tahapan berikut. Prospek dapat keluar kapan saja jika batal.",
+    "guidelines": "Panduan",
+    "guideline_1": "Hubungi prospek dalam 24 jam pertama",
+    "guideline_2": "Lakukan follow up minimal 3x sebelum menyatakan lost",
+    "guideline_3": "Catat semua interaksi dengan prospek",
+    "guideline_4": "Update status prospek secara berkala"
   },
   "streak": {
     "days": "hari",
@@ -823,6 +904,18 @@
     "elite": "Elite",
     "super_elite": "Super Elite",
     "legendary": "LOT Legendary"
+  },
+  "level_guide": {
+    "title": "Panduan Level",
+    "description": "Pelajari jenjang karir dan cara mendapatkan XP di LOT Quest",
+    "current_level": "Level Saat Ini",
+    "to_next_level": "XP ke Level Berikutnya",
+    "current": "Level Saat Ini",
+    "remaining": "Sisa XP",
+    "range": "Level",
+    "requires": "Dibutuhkan",
+    "career_hierarchy": "Jenjang Karir",
+    "xp_sources": "Sumber XP"
   },
   "onboarding": {
     "step_1_title": "Upload Foto Profil",

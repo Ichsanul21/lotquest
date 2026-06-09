@@ -16,12 +16,14 @@ import QuestList from './pages/quest/QuestList';
 import QuestDetail from './pages/quest-detail/QuestDetail';
 import Academy from './pages/academy/Academy';
 import Listing from './pages/listing/Listing';
+import Prospect from './pages/prospect/Prospect';
 import Profile from './pages/profile/Profile';
 import Badges from './pages/badges/Badges';
 import Leaderboard from './pages/leaderboard/Leaderboard';
 import HallOfFame from './pages/hall-of-fame/HallOfFame';
 import Support from './pages/support/Support';
 import Poster from './pages/poster/Poster';
+import LevelGuide from './pages/level-guide/LevelGuide';
 import Chat from './pages/chat/Chat';
 import Notifications from './pages/notifications/Notifications';
 import Activities from './pages/activities/Activities';
@@ -32,14 +34,14 @@ import NotFound from './pages/NotFound';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { isAuthenticated, isLoading } = useAuth();
-  if (isLoading) return <div className="min-h-screen bg-[#0B0B0F] flex items-center justify-center"><div className="w-8 h-8 border-2 border-[#FFE082] border-t-transparent rounded-full animate-spin" /></div>;
+  if (isLoading) return <div className="min-h-screen bg-dark-bg flex items-center justify-center"><div className="w-8 h-8 border-2 border-gold-700 border-t-transparent rounded-full animate-spin" /></div>;
   if (!isAuthenticated) return <Navigate to="/login" replace />;
   return <>{children}</>;
 }
 
 function PublicRoute({ children }: { children: React.ReactNode }) {
   const { isAuthenticated, isLoading } = useAuth();
-  if (isLoading) return <div className="min-h-screen bg-[#0B0B0F] flex items-center justify-center"><div className="w-8 h-8 border-2 border-[#FFE082] border-t-transparent rounded-full animate-spin" /></div>;
+  if (isLoading) return <div className="min-h-screen bg-dark-bg flex items-center justify-center"><div className="w-8 h-8 border-2 border-gold-700 border-t-transparent rounded-full animate-spin" /></div>;
   if (isAuthenticated) return <Navigate to="/home" replace />;
   return <>{children}</>;
 }
@@ -64,13 +66,14 @@ function AppRoutes() {
         <Route path="/quest/:id" element={<QuestDetail />} />
         <Route path="/academy" element={<Academy />} />
         <Route path="/listing" element={<Listing />} />
-        <Route path="/prospect" element={<Navigate to="/listing" replace />} />
+        <Route path="/prospect" element={<Prospect />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/badges" element={<Badges />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
         <Route path="/hall-of-fame" element={<HallOfFame />} />
         <Route path="/support" element={<Support />} />
         <Route path="/poster" element={<Poster />} />
+        <Route path="/level-guide" element={<LevelGuide />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/activities" element={<Activities />} />

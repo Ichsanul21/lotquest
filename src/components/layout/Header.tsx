@@ -17,7 +17,7 @@ export function Header({ title, showBack, showSearch, showNotification, rightAct
   const { agent } = useAuth();
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0B0B0F]/80 backdrop-blur-[12px] border-b border-white/10 px-4 py-3">
+    <header className="sticky top-0 z-50 bg-dark-bg/80 backdrop-blur-[12px] border-b border-white/10 px-4 py-3">
       <div className="flex items-center justify-between max-w-lg mx-auto">
         <div className="flex items-center gap-3">
           {showBack && (
@@ -29,7 +29,7 @@ export function Header({ title, showBack, showSearch, showNotification, rightAct
             <h1 className="text-lg font-semibold text-white">{title}</h1>
           ) : (
             <div className="flex items-center gap-2">
-              <Medal className="w-5 h-5 text-[#FFE082]" />
+              <Medal className="w-5 h-5 text-gold-700" />
               <span className="text-base font-semibold text-white">LOT Quest</span>
             </div>
           )}

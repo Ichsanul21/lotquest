@@ -44,10 +44,10 @@ export default function Onboarding() {
   const CurrentIcon = steps[step].icon;
 
   return (
-    <div className="min-h-screen bg-[#0B0B0F] flex flex-col items-center justify-center px-6">
+    <div className="min-h-screen bg-dark-bg flex flex-col items-center justify-center px-6">
       <div className="w-full max-w-sm flex flex-col items-center gap-6 animate-fade-in">
         <div className="w-20 h-20 rounded-2xl gold-gradient flex items-center justify-center shadow-[0_0_30px_rgba(255,224,130,0.2)]">
-          <CurrentIcon className="w-10 h-10 text-[#0B0B0F]" />
+          <CurrentIcon className="w-10 h-10 text-dark-bg" />
         </div>
 
         <div className="flex gap-1.5">
@@ -63,7 +63,7 @@ export default function Onboarding() {
           <div className="flex flex-col items-center gap-4">
             <button
               onClick={() => fileRef.current?.click()}
-              className="w-24 h-24 rounded-2xl border-2 border-dashed border-white/20 flex items-center justify-center hover:border-[#FFE082]/50 transition-colors overflow-hidden"
+              className="w-24 h-24 rounded-2xl border-2 border-dashed border-white/20 flex items-center justify-center hover:border-gold-700/50 transition-colors overflow-hidden"
             >
               {avatar ? (
                 <img src={avatar} alt="Preview" className="w-full h-full object-cover" />

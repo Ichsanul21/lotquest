@@ -51,9 +51,31 @@ export interface Prospect {
   id: number;
   name: string;
   phone: string;
-  status: 'New' | 'Contacted' | 'Converted' | 'Lost';
+  status: 'New Lead' | 'Follow Up' | 'Showing' | 'Akad' | 'Deal' | 'Lost';
   source: string;
   notes: string;
+  created_at: string;
+  next_action?: string;
+  next_date?: string;
+  next_time?: string;
+  reminders?: ProspectReminder[];
+}
+
+export interface ProspectReminder {
+  id: number;
+  action: string;
+  date: string;
+  time: string;
+  created_at: string;
+}
+
+export interface ProspectActivity {
+  id: number;
+  prospect_id: number;
+  action: string;
+  from_status: string;
+  to_status: string;
+  note: string;
   created_at: string;
 }
 
@@ -101,6 +123,7 @@ export interface ChatMessage {
 export interface Notification {
   id: number;
   type: 'quest' | 'badge' | 'level_up' | 'achievement' | 'system' | 'event';
+  category: 'action_required' | 'achievement' | 'community' | 'company';
   title: string;
   body: string;
   read: boolean;

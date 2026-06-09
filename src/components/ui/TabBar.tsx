@@ -19,7 +19,7 @@ export function TabBar({ tabs, activeTab, onTabChange, className = '' }: TabBarP
           role="tab"
           aria-selected={activeTab === t.key}
           onClick={() => onTabChange(t.key)}
-          className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all whitespace-nowrap ${activeTab === t.key ? 'gold-gradient text-[#0B0B0F]' : 'text-zinc-400 hover:text-white'}`}
+          className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all whitespace-nowrap ${activeTab === t.key ? 'gold-gradient text-dark-bg' : 'text-zinc-400 hover:text-white'}`}
         >
           {t.label}
         </button>
